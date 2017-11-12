@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGA_top_level
-Sat Nov 11 15:12:40 2017
+Sun Nov 12 10:14:37 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -22,15 +22,19 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
  14. Source assignments for pixelGenerator:videoGen|tankBROM:colorsB|altsyncram:altsyncram_component|altsyncram_ba81:auto_generated
  15. Source assignments for pixelGenerator:videoGen|BulletUpROM:colorsC|altsyncram:altsyncram_component|altsyncram_fi81:auto_generated
  16. Source assignments for pixelGenerator:videoGen|BulletDownROM:colorsD|altsyncram:altsyncram_component|altsyncram_2p81:auto_generated
- 17. Parameter Settings for User Entity Instance: pixelGenerator:videoGen|tankAROM:colorsA|altsyncram:altsyncram_component
- 18. Parameter Settings for User Entity Instance: pixelGenerator:videoGen|tankBROM:colorsB|altsyncram:altsyncram_component
- 19. Parameter Settings for User Entity Instance: pixelGenerator:videoGen|BulletUpROM:colorsC|altsyncram:altsyncram_component
- 20. Parameter Settings for User Entity Instance: pixelGenerator:videoGen|BulletDownROM:colorsD|altsyncram:altsyncram_component
- 21. altsyncram Parameter Settings by Entity Instance
- 22. Port Connectivity Checks: "pixelGenerator:videoGen"
- 23. Post-Synthesis Netlist Statistics for Top Partition
- 24. Elapsed Time Per Partition
- 25. Analysis & Synthesis Messages
+ 17. Source assignments for pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component|altsyncram_4881:auto_generated
+ 18. Parameter Settings for User Entity Instance: pixelGenerator:videoGen|tankAROM:colorsA|altsyncram:altsyncram_component
+ 19. Parameter Settings for User Entity Instance: pixelGenerator:videoGen|tankBROM:colorsB|altsyncram:altsyncram_component
+ 20. Parameter Settings for User Entity Instance: pixelGenerator:videoGen|BulletUpROM:colorsC|altsyncram:altsyncram_component
+ 21. Parameter Settings for User Entity Instance: pixelGenerator:videoGen|BulletDownROM:colorsD|altsyncram:altsyncram_component
+ 22. Parameter Settings for User Entity Instance: pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component
+ 23. Parameter Settings for Inferred Entity Instance: pixelGenerator:videoGen|lpm_divide:Mod1
+ 24. Parameter Settings for Inferred Entity Instance: pixelGenerator:videoGen|lpm_divide:Mod0
+ 25. altsyncram Parameter Settings by Entity Instance
+ 26. Port Connectivity Checks: "pixelGenerator:videoGen"
+ 27. Post-Synthesis Netlist Statistics for Top Partition
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
 
 
 
@@ -57,18 +61,18 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 11 15:12:40 2017       ;
+; Analysis & Synthesis Status        ; Successful - Sun Nov 12 10:14:37 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; VGA_top_level                               ;
 ; Top-level Entity Name              ; VGA_top_level                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 396                                         ;
-;     Total combinational functions  ; 361                                         ;
-;     Dedicated logic registers      ; 99                                          ;
-; Total registers                    ; 99                                          ;
+; Total logic elements               ; 778                                         ;
+;     Total combinational functions  ; 725                                         ;
+;     Dedicated logic registers      ; 134                                         ;
+; Total registers                    ; 134                                         ;
 ; Total pins                         ; 30                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 502,944                                     ;
+; Total memory bits                  ; 2,075,784                                   ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
@@ -173,43 +177,60 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                        ;
-+----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                          ; Library ;
-+----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------------------+---------+
-; tankBROM.vhd                     ; yes             ; User Wizard-Generated File             ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankBROM.vhd           ;         ;
-; tankAROM.vhd                     ; yes             ; User Wizard-Generated File             ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankAROM.vhd           ;         ;
-; ../tank_pack.vhd                 ; yes             ; User VHDL File                         ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/tank_pack.vhd                           ;         ;
-; VGA_top_level.vhd                ; yes             ; User VHDL File                         ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/VGA_top_level.vhd      ;         ;
-; pixelGenerator.vhd               ; yes             ; User VHDL File                         ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd     ;         ;
-; vga_sync.vhd                     ; yes             ; User VHDL File                         ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/vga_sync.vhd           ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf                                 ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/stratix_ram_block.inc                          ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mux.inc                                    ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_decode.inc                                 ;         ;
-; aglobal170.inc                   ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/aglobal170.inc                                 ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_rdenreg.inc                                  ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altrom.inc                                     ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altram.inc                                     ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altdpram.inc                                   ;         ;
-; db/altsyncram_o881.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_o881.tdf ;         ;
-; tankrom.mif                      ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankrom.mif            ;         ;
-; db/decode_c8a.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/decode_c8a.tdf      ;         ;
-; db/mux_hob.tdf                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/mux_hob.tdf         ;         ;
-; db/altsyncram_ba81.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_ba81.tdf ;         ;
-; tankrom2.mif                     ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankrom2.mif           ;         ;
-; bulletuprom.vhd                  ; yes             ; Auto-Found Wizard-Generated File       ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletuprom.vhd        ;         ;
-; db/altsyncram_fi81.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_fi81.tdf ;         ;
-; bulletuprom.mif                  ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletuprom.mif        ;         ;
-; bulletdownrom.vhd                ; yes             ; Auto-Found Wizard-Generated File       ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletdownrom.vhd      ;         ;
-; db/altsyncram_2p81.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_2p81.tdf ;         ;
-; bulletdownrom.mif                ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletdownrom.mif      ;         ;
-+----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                            ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                              ; Library ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
+; backROM.vhd                      ; yes             ; User Wizard-Generated File             ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/backROM.vhd                ;         ;
+; tankBROM.vhd                     ; yes             ; User Wizard-Generated File             ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankBROM.vhd               ;         ;
+; tankAROM.vhd                     ; yes             ; User Wizard-Generated File             ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankAROM.vhd               ;         ;
+; ../tank_pack.vhd                 ; yes             ; User VHDL File                         ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/tank_pack.vhd                               ;         ;
+; VGA_top_level.vhd                ; yes             ; User VHDL File                         ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/VGA_top_level.vhd          ;         ;
+; pixelGenerator.vhd               ; yes             ; User VHDL File                         ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd         ;         ;
+; vga_sync.vhd                     ; yes             ; User VHDL File                         ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/vga_sync.vhd               ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf                                     ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/stratix_ram_block.inc                              ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mux.inc                                        ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_decode.inc                                     ;         ;
+; aglobal170.inc                   ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/aglobal170.inc                                     ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_rdenreg.inc                                      ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altrom.inc                                         ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altram.inc                                         ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altdpram.inc                                       ;         ;
+; db/altsyncram_o881.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_o881.tdf     ;         ;
+; tankrom.mif                      ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankrom.mif                ;         ;
+; db/decode_c8a.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/decode_c8a.tdf          ;         ;
+; db/mux_hob.tdf                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/mux_hob.tdf             ;         ;
+; db/altsyncram_ba81.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_ba81.tdf     ;         ;
+; tankrom2.mif                     ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankrom2.mif               ;         ;
+; bulletuprom.vhd                  ; yes             ; Auto-Found Wizard-Generated File       ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletuprom.vhd            ;         ;
+; db/altsyncram_fi81.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_fi81.tdf     ;         ;
+; bulletuprom.mif                  ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletuprom.mif            ;         ;
+; bulletdownrom.vhd                ; yes             ; Auto-Found Wizard-Generated File       ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletdownrom.vhd          ;         ;
+; db/altsyncram_2p81.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_2p81.tdf     ;         ;
+; bulletdownrom.mif                ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletdownrom.mif          ;         ;
+; db/altsyncram_4881.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_4881.tdf     ;         ;
+; backrom.mif                      ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/backrom.mif                ;         ;
+; db/decode_k8a.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/decode_k8a.tdf          ;         ;
+; db/mux_pob.tdf                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/mux_pob.tdf             ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_divide.tdf                                     ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/abs_divider.inc                                    ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sign_div_unsign.inc                                ;         ;
+; db/lpm_divide_icm.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/lpm_divide_icm.tdf      ;         ;
+; db/sign_div_unsign_7nh.tdf       ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/sign_div_unsign_7nh.tdf ;         ;
+; db/alt_u_div_2af.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/alt_u_div_2af.tdf       ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/add_sub_7pc.tdf         ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/add_sub_8pc.tdf         ;         ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------------------------------+
@@ -217,70 +238,84 @@ agreement for further details.
 +---------------------------------------------+------------------------------------+
 ; Resource                                    ; Usage                              ;
 +---------------------------------------------+------------------------------------+
-; Estimated Total logic elements              ; 396                                ;
+; Estimated Total logic elements              ; 778                                ;
 ;                                             ;                                    ;
-; Total combinational functions               ; 361                                ;
+; Total combinational functions               ; 725                                ;
 ; Logic element usage by number of LUT inputs ;                                    ;
-;     -- 4 input functions                    ; 144                                ;
-;     -- 3 input functions                    ; 106                                ;
-;     -- <=2 input functions                  ; 111                                ;
+;     -- 4 input functions                    ; 276                                ;
+;     -- 3 input functions                    ; 196                                ;
+;     -- <=2 input functions                  ; 253                                ;
 ;                                             ;                                    ;
 ; Logic elements by mode                      ;                                    ;
-;     -- normal mode                          ; 260                                ;
-;     -- arithmetic mode                      ; 101                                ;
+;     -- normal mode                          ; 499                                ;
+;     -- arithmetic mode                      ; 226                                ;
 ;                                             ;                                    ;
-; Total registers                             ; 99                                 ;
-;     -- Dedicated logic registers            ; 99                                 ;
+; Total registers                             ; 134                                ;
+;     -- Dedicated logic registers            ; 134                                ;
 ;     -- I/O registers                        ; 0                                  ;
 ;                                             ;                                    ;
 ; I/O pins                                    ; 30                                 ;
-; Total memory bits                           ; 502944                             ;
+; Total memory bits                           ; 2075784                            ;
 ;                                             ;                                    ;
 ; Embedded Multiplier 9-bit elements          ; 0                                  ;
 ;                                             ;                                    ;
 ; Maximum fan-out node                        ; VGA_SYNC:videoSync|pixel_clock_int ;
-; Maximum fan-out                             ; 192                                ;
-; Total fan-out                               ; 3234                               ;
-; Average fan-out                             ; 4.87                               ;
+; Maximum fan-out                             ; 387                                ;
+; Total fan-out                               ; 7275                               ;
+; Average fan-out                             ; 5.80                               ;
 +---------------------------------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                            ;
-+----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                 ; Entity Name     ; Library Name ;
-+----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |VGA_top_level                               ; 361 (0)             ; 99 (0)                    ; 502944      ; 0            ; 0       ; 0         ; 30   ; 0            ; |VGA_top_level                                                                                                                      ; VGA_top_level   ; work         ;
-;    |VGA_SYNC:videoSync|                      ; 59 (59)             ; 46 (46)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|VGA_SYNC:videoSync                                                                                                   ; VGA_SYNC        ; work         ;
-;    |pixelGenerator:videoGen|                 ; 302 (254)           ; 53 (52)                   ; 502944      ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen                                                                                              ; pixelGenerator  ; work         ;
-;       |BulletDownROM:colorsD|                ; 0 (0)               ; 0 (0)                     ; 9576        ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|BulletDownROM:colorsD                                                                        ; BulletDownROM   ; work         ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 9576        ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|BulletDownROM:colorsD|altsyncram:altsyncram_component                                        ; altsyncram      ; work         ;
-;             |altsyncram_2p81:auto_generated| ; 0 (0)               ; 0 (0)                     ; 9576        ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|BulletDownROM:colorsD|altsyncram:altsyncram_component|altsyncram_2p81:auto_generated         ; altsyncram_2p81 ; work         ;
-;       |BulletUpROM:colorsC|                  ; 0 (0)               ; 0 (0)                     ; 9576        ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|BulletUpROM:colorsC                                                                          ; BulletUpROM     ; work         ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 9576        ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|BulletUpROM:colorsC|altsyncram:altsyncram_component                                          ; altsyncram      ; work         ;
-;             |altsyncram_fi81:auto_generated| ; 0 (0)               ; 0 (0)                     ; 9576        ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|BulletUpROM:colorsC|altsyncram:altsyncram_component|altsyncram_fi81:auto_generated           ; altsyncram_fi81 ; work         ;
-;       |tankAROM:colorsA|                     ; 24 (0)              ; 1 (0)                     ; 241896      ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|tankAROM:colorsA                                                                             ; tankAROM        ; work         ;
-;          |altsyncram:altsyncram_component|   ; 24 (0)              ; 1 (0)                     ; 241896      ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|tankAROM:colorsA|altsyncram:altsyncram_component                                             ; altsyncram      ; work         ;
-;             |altsyncram_o881:auto_generated| ; 24 (0)              ; 1 (1)                     ; 241896      ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|tankAROM:colorsA|altsyncram:altsyncram_component|altsyncram_o881:auto_generated              ; altsyncram_o881 ; work         ;
-;                |mux_hob:mux2|                ; 24 (24)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|tankAROM:colorsA|altsyncram:altsyncram_component|altsyncram_o881:auto_generated|mux_hob:mux2 ; mux_hob         ; work         ;
-;       |tankBROM:colorsB|                     ; 24 (0)              ; 0 (0)                     ; 241896      ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|tankBROM:colorsB                                                                             ; tankBROM        ; work         ;
-;          |altsyncram:altsyncram_component|   ; 24 (0)              ; 0 (0)                     ; 241896      ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|tankBROM:colorsB|altsyncram:altsyncram_component                                             ; altsyncram      ; work         ;
-;             |altsyncram_ba81:auto_generated| ; 24 (0)              ; 0 (0)                     ; 241896      ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|tankBROM:colorsB|altsyncram:altsyncram_component|altsyncram_ba81:auto_generated              ; altsyncram_ba81 ; work         ;
-;                |mux_hob:mux2|                ; 24 (24)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|tankBROM:colorsB|altsyncram:altsyncram_component|altsyncram_ba81:auto_generated|mux_hob:mux2 ; mux_hob         ; work         ;
-+----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                         ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                          ; Entity Name         ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |VGA_top_level                               ; 725 (0)             ; 134 (0)                   ; 2075784     ; 0            ; 0       ; 0         ; 30   ; 0            ; |VGA_top_level                                                                                                                               ; VGA_top_level       ; work         ;
+;    |VGA_SYNC:videoSync|                      ; 59 (59)             ; 46 (46)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|VGA_SYNC:videoSync                                                                                                            ; VGA_SYNC            ; work         ;
+;    |pixelGenerator:videoGen|                 ; 666 (274)           ; 88 (84)                   ; 2075784     ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen                                                                                                       ; pixelGenerator      ; work         ;
+;       |BulletDownROM:colorsD|                ; 0 (0)               ; 0 (0)                     ; 9576        ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|BulletDownROM:colorsD                                                                                 ; BulletDownROM       ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 9576        ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|BulletDownROM:colorsD|altsyncram:altsyncram_component                                                 ; altsyncram          ; work         ;
+;             |altsyncram_2p81:auto_generated| ; 0 (0)               ; 0 (0)                     ; 9576        ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|BulletDownROM:colorsD|altsyncram:altsyncram_component|altsyncram_2p81:auto_generated                  ; altsyncram_2p81     ; work         ;
+;       |BulletUpROM:colorsC|                  ; 0 (0)               ; 0 (0)                     ; 9576        ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|BulletUpROM:colorsC                                                                                   ; BulletUpROM         ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 9576        ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|BulletUpROM:colorsC|altsyncram:altsyncram_component                                                   ; altsyncram          ; work         ;
+;             |altsyncram_fi81:auto_generated| ; 0 (0)               ; 0 (0)                     ; 9576        ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|BulletUpROM:colorsC|altsyncram:altsyncram_component|altsyncram_fi81:auto_generated                    ; altsyncram_fi81     ; work         ;
+;       |backROM:colorsF|                      ; 104 (0)             ; 3 (0)                     ; 1572840     ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|backROM:colorsF                                                                                       ; backROM             ; work         ;
+;          |altsyncram:altsyncram_component|   ; 104 (0)             ; 3 (0)                     ; 1572840     ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component                                                       ; altsyncram          ; work         ;
+;             |altsyncram_4881:auto_generated| ; 104 (0)             ; 3 (3)                     ; 1572840     ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component|altsyncram_4881:auto_generated                        ; altsyncram_4881     ; work         ;
+;                |decode_k8a:rden_decode|      ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component|altsyncram_4881:auto_generated|decode_k8a:rden_decode ; decode_k8a          ; work         ;
+;                |mux_pob:mux2|                ; 96 (96)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component|altsyncram_4881:auto_generated|mux_pob:mux2           ; mux_pob             ; work         ;
+;       |lpm_divide:Mod0|                      ; 81 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|lpm_divide:Mod0                                                                                       ; lpm_divide          ; work         ;
+;          |lpm_divide_icm:auto_generated|     ; 81 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|lpm_divide:Mod0|lpm_divide_icm:auto_generated                                                         ; lpm_divide_icm      ; work         ;
+;             |sign_div_unsign_7nh:divider|    ; 81 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|lpm_divide:Mod0|lpm_divide_icm:auto_generated|sign_div_unsign_7nh:divider                             ; sign_div_unsign_7nh ; work         ;
+;                |alt_u_div_2af:divider|       ; 81 (81)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|lpm_divide:Mod0|lpm_divide_icm:auto_generated|sign_div_unsign_7nh:divider|alt_u_div_2af:divider       ; alt_u_div_2af       ; work         ;
+;       |lpm_divide:Mod1|                      ; 159 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|lpm_divide:Mod1                                                                                       ; lpm_divide          ; work         ;
+;          |lpm_divide_icm:auto_generated|     ; 159 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|lpm_divide:Mod1|lpm_divide_icm:auto_generated                                                         ; lpm_divide_icm      ; work         ;
+;             |sign_div_unsign_7nh:divider|    ; 159 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|lpm_divide:Mod1|lpm_divide_icm:auto_generated|sign_div_unsign_7nh:divider                             ; sign_div_unsign_7nh ; work         ;
+;                |alt_u_div_2af:divider|       ; 159 (159)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|lpm_divide:Mod1|lpm_divide_icm:auto_generated|sign_div_unsign_7nh:divider|alt_u_div_2af:divider       ; alt_u_div_2af       ; work         ;
+;       |tankAROM:colorsA|                     ; 24 (0)              ; 1 (0)                     ; 241896      ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|tankAROM:colorsA                                                                                      ; tankAROM            ; work         ;
+;          |altsyncram:altsyncram_component|   ; 24 (0)              ; 1 (0)                     ; 241896      ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|tankAROM:colorsA|altsyncram:altsyncram_component                                                      ; altsyncram          ; work         ;
+;             |altsyncram_o881:auto_generated| ; 24 (0)              ; 1 (1)                     ; 241896      ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|tankAROM:colorsA|altsyncram:altsyncram_component|altsyncram_o881:auto_generated                       ; altsyncram_o881     ; work         ;
+;                |mux_hob:mux2|                ; 24 (24)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|tankAROM:colorsA|altsyncram:altsyncram_component|altsyncram_o881:auto_generated|mux_hob:mux2          ; mux_hob             ; work         ;
+;       |tankBROM:colorsB|                     ; 24 (0)              ; 0 (0)                     ; 241896      ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|tankBROM:colorsB                                                                                      ; tankBROM            ; work         ;
+;          |altsyncram:altsyncram_component|   ; 24 (0)              ; 0 (0)                     ; 241896      ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|tankBROM:colorsB|altsyncram:altsyncram_component                                                      ; altsyncram          ; work         ;
+;             |altsyncram_ba81:auto_generated| ; 24 (0)              ; 0 (0)                     ; 241896      ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|tankBROM:colorsB|altsyncram:altsyncram_component|altsyncram_ba81:auto_generated                       ; altsyncram_ba81     ; work         ;
+;                |mux_hob:mux2|                ; 24 (24)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_top_level|pixelGenerator:videoGen|tankBROM:colorsB|altsyncram:altsyncram_component|altsyncram_ba81:auto_generated|mux_hob:mux2          ; mux_hob             ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                               ;
-+-------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+-------------------+
-; Name                                                                                                                    ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF               ;
-+-------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+-------------------+
-; pixelGenerator:videoGen|BulletDownROM:colorsD|altsyncram:altsyncram_component|altsyncram_2p81:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 399          ; 24           ; --           ; --           ; 9576   ; BulletDownROM.mif ;
-; pixelGenerator:videoGen|BulletUpROM:colorsC|altsyncram:altsyncram_component|altsyncram_fi81:auto_generated|ALTSYNCRAM   ; AUTO ; ROM  ; 399          ; 24           ; --           ; --           ; 9576   ; BulletUpROM.mif   ;
-; pixelGenerator:videoGen|tankAROM:colorsA|altsyncram:altsyncram_component|altsyncram_o881:auto_generated|ALTSYNCRAM      ; AUTO ; ROM  ; 10079        ; 24           ; --           ; --           ; 241896 ; tankROM.mif       ;
-; pixelGenerator:videoGen|tankBROM:colorsB|altsyncram:altsyncram_component|altsyncram_ba81:auto_generated|ALTSYNCRAM      ; AUTO ; ROM  ; 10079        ; 24           ; --           ; --           ; 241896 ; tankROM2.mif      ;
-+-------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+-------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                ;
++-------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+---------+-------------------+
+; Name                                                                                                                    ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size    ; MIF               ;
++-------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+---------+-------------------+
+; pixelGenerator:videoGen|BulletDownROM:colorsD|altsyncram:altsyncram_component|altsyncram_2p81:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 399          ; 24           ; --           ; --           ; 9576    ; BulletDownROM.mif ;
+; pixelGenerator:videoGen|BulletUpROM:colorsC|altsyncram:altsyncram_component|altsyncram_fi81:auto_generated|ALTSYNCRAM   ; AUTO ; ROM  ; 399          ; 24           ; --           ; --           ; 9576    ; BulletUpROM.mif   ;
+; pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component|altsyncram_4881:auto_generated|ALTSYNCRAM       ; AUTO ; ROM  ; 65535        ; 24           ; --           ; --           ; 1572840 ; backROM.mif       ;
+; pixelGenerator:videoGen|tankAROM:colorsA|altsyncram:altsyncram_component|altsyncram_o881:auto_generated|ALTSYNCRAM      ; AUTO ; ROM  ; 10079        ; 24           ; --           ; --           ; 241896  ; tankROM.mif       ;
+; pixelGenerator:videoGen|tankBROM:colorsB|altsyncram:altsyncram_component|altsyncram_ba81:auto_generated|ALTSYNCRAM      ; AUTO ; ROM  ; 10079        ; 24           ; --           ; --           ; 241896  ; tankROM2.mif      ;
++-------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+---------+-------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -299,9 +334,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 99    ;
+; Total registers                              ; 134   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 2     ;
+; Number of registers using Synchronous Load   ; 26    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 48    ;
@@ -309,14 +344,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------+
-; Inverted Register Statistics                       ;
-+------------------------------------------+---------+
-; Inverted Register                        ; Fan out ;
-+------------------------------------------+---------+
-; pixelGenerator:videoGen|colorAddInter[0] ; 2       ;
-; Total number of inverted registers = 1   ;         ;
-+------------------------------------------+---------+
++-------------------------------------------------------+
+; Inverted Register Statistics                          ;
++---------------------------------------------+---------+
+; Inverted Register                           ; Fan out ;
++---------------------------------------------+---------+
+; pixelGenerator:videoGen|colorAddIntTrans[0] ; 1       ;
+; pixelGenerator:videoGen|colorAddInter[0]    ; 2       ;
+; Total number of inverted registers = 2      ;         ;
++---------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -328,7 +364,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |VGA_top_level|pixelGenerator:videoGen|colorAddInter[2] ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |VGA_top_level|pixelGenerator:videoGen|colorAddInter[3] ;
 ; 5:1                ; 9 bits    ; 27 LEs        ; 18 LEs               ; 9 LEs                  ; Yes        ; |VGA_top_level|pixelGenerator:videoGen|colorAddInter[5] ;
-; 9:1                ; 24 bits   ; 144 LEs       ; 72 LEs               ; 72 LEs                 ; Yes        ; |VGA_top_level|pixelGenerator:videoGen|green_out[3]     ;
+; 6:1                ; 24 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; Yes        ; |VGA_top_level|pixelGenerator:videoGen|green_out[3]     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
 
 
@@ -366,6 +402,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+--------------------+------+-----------------------------------------------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                     ;
 +---------------------------------+--------------------+------+-----------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component|altsyncram_4881:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                              ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                               ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------+
@@ -612,12 +657,119 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+----------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                     ;
++------------------------------------+----------------------+----------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                  ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                               ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                             ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                             ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                           ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                  ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                                  ;
+; WIDTH_A                            ; 24                   ; Signed Integer                                           ;
+; WIDTHAD_A                          ; 16                   ; Signed Integer                                           ;
+; NUMWORDS_A                         ; 65535                ; Signed Integer                                           ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                  ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                  ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                  ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                  ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                  ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                  ;
+; WIDTH_B                            ; 1                    ; Untyped                                                  ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                                  ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                                  ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                  ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                  ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                  ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                  ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                  ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                  ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                  ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                  ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                  ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                  ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                  ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                  ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                           ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                  ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                  ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                  ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                  ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                  ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                  ;
+; INIT_FILE                          ; backROM.mif          ; Untyped                                                  ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                  ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                  ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                  ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                  ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                  ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                  ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                  ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                  ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                  ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                  ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                  ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                                  ;
+; CBXI_PARAMETER                     ; altsyncram_4881      ; Untyped                                                  ;
++------------------------------------+----------------------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: pixelGenerator:videoGen|lpm_divide:Mod1 ;
++------------------------+----------------+------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                           ;
++------------------------+----------------+------------------------------------------------+
+; LPM_WIDTHN             ; 31             ; Untyped                                        ;
+; LPM_WIDTHD             ; 31             ; Untyped                                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                        ;
+; CBXI_PARAMETER         ; lpm_divide_icm ; Untyped                                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                 ;
++------------------------+----------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: pixelGenerator:videoGen|lpm_divide:Mod0 ;
++------------------------+----------------+------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                           ;
++------------------------+----------------+------------------------------------------------+
+; LPM_WIDTHN             ; 31             ; Untyped                                        ;
+; LPM_WIDTHD             ; 31             ; Untyped                                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                        ;
+; CBXI_PARAMETER         ; lpm_divide_icm ; Untyped                                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                 ;
++------------------------+----------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +---------------------------------------------------------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                                                                          ;
 +-------------------------------------------+-------------------------------------------------------------------------------+
 ; Name                                      ; Value                                                                         ;
 +-------------------------------------------+-------------------------------------------------------------------------------+
-; Number of entity instances                ; 4                                                                             ;
+; Number of entity instances                ; 5                                                                             ;
 ; Entity Instance                           ; pixelGenerator:videoGen|tankAROM:colorsA|altsyncram:altsyncram_component      ;
 ;     -- OPERATION_MODE                     ; ROM                                                                           ;
 ;     -- WIDTH_A                            ; 24                                                                            ;
@@ -655,6 +807,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- OPERATION_MODE                     ; ROM                                                                           ;
 ;     -- WIDTH_A                            ; 24                                                                            ;
 ;     -- NUMWORDS_A                         ; 399                                                                           ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                  ;
+;     -- WIDTH_B                            ; 1                                                                             ;
+;     -- NUMWORDS_B                         ; 1                                                                             ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                        ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                  ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                     ;
+; Entity Instance                           ; pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component       ;
+;     -- OPERATION_MODE                     ; ROM                                                                           ;
+;     -- WIDTH_A                            ; 24                                                                            ;
+;     -- NUMWORDS_A                         ; 65535                                                                         ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                  ;
 ;     -- WIDTH_B                            ; 1                                                                             ;
 ;     -- NUMWORDS_B                         ; 1                                                                             ;
@@ -713,25 +876,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 30                          ;
-; cycloneiii_ff         ; 99                          ;
+; cycloneiii_ff         ; 134                         ;
 ;     ENA               ; 46                          ;
 ;     ENA SLD           ; 2                           ;
-;     plain             ; 51                          ;
-; cycloneiii_lcell_comb ; 361                         ;
-;     arith             ; 101                         ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 58                          ;
-;         3 data inputs ; 41                          ;
-;     normal            ; 260                         ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 8                           ;
-;         2 data inputs ; 41                          ;
-;         3 data inputs ; 65                          ;
-;         4 data inputs ; 144                         ;
-; cycloneiii_ram_block  ; 144                         ;
+;     SLD               ; 24                          ;
+;     plain             ; 62                          ;
+; cycloneiii_lcell_comb ; 725                         ;
+;     arith             ; 226                         ;
+;         1 data inputs ; 29                          ;
+;         2 data inputs ; 108                         ;
+;         3 data inputs ; 89                          ;
+;     normal            ; 499                         ;
+;         0 data inputs ; 7                           ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 99                          ;
+;         3 data inputs ; 107                         ;
+;         4 data inputs ; 276                         ;
+; cycloneiii_ram_block  ; 336                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 5.12                        ;
+; Max LUT depth         ; 15.30                       ;
+; Average LUT depth     ; 6.26                        ;
 +-----------------------+-----------------------------+
 
 
@@ -740,7 +904,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -750,10 +914,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Nov 11 15:12:30 2017
+    Info: Processing started: Sun Nov 12 10:14:25 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA_top_level -c VGA_top_level
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file backrom.vhd
+    Info (12022): Found design unit 1: backROM-SYN File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/backROM.vhd Line: 52
+    Info (12023): Found entity 1: backROM File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/backROM.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file tankbrom.vhd
     Info (12022): Found design unit 1: tankBROM-SYN File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankBROM.vhd Line: 52
     Info (12023): Found entity 1: tankBROM File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankBROM.vhd Line: 42
@@ -762,7 +929,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file tankaro
     Info (12023): Found entity 1: tankAROM File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankAROM.vhd Line: 42
 Info (12021): Found 2 design units, including 0 entities, in source file /users/graehme/documents/college/eecs 355/localfinalproject/tank_pack.vhd
     Info (12022): Found design unit 1: tank_pack File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/tank_pack.vhd Line: 5
-    Info (12022): Found design unit 2: tank_pack-body File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/tank_pack.vhd Line: 47
+    Info (12022): Found design unit 2: tank_pack-body File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/tank_pack.vhd Line: 57
 Info (12021): Found 2 design units, including 1 entities, in source file vga_top_level.vhd
     Info (12022): Found design unit 1: VGA_top_level-structural File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/VGA_top_level.vhd Line: 17
     Info (12023): Found entity 1: VGA_top_level File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/VGA_top_level.vhd Line: 5
@@ -777,7 +944,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file vga_syn
     Info (12023): Found entity 1: VGA_SYNC File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/vga_sync.vhd Line: 7
 Info (12127): Elaborating entity "VGA_top_level" for the top level hierarchy
 Info (12128): Elaborating entity "pixelGenerator" for hierarchy "pixelGenerator:videoGen" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/VGA_top_level.vhd Line: 53
-Info (12128): Elaborating entity "tankAROM" for hierarchy "pixelGenerator:videoGen|tankAROM:colorsA" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 58
+Info (12128): Elaborating entity "tankAROM" for hierarchy "pixelGenerator:videoGen|tankAROM:colorsA" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 59
 Info (12128): Elaborating entity "altsyncram" for hierarchy "pixelGenerator:videoGen|tankAROM:colorsA|altsyncram:altsyncram_component" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankAROM.vhd Line: 84
 Info (12130): Elaborated megafunction instantiation "pixelGenerator:videoGen|tankAROM:colorsA|altsyncram:altsyncram_component" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankAROM.vhd Line: 84
 Info (12133): Instantiated megafunction "pixelGenerator:videoGen|tankAROM:colorsA|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankAROM.vhd Line: 84
@@ -803,7 +970,7 @@ Info (12128): Elaborating entity "decode_c8a" for hierarchy "pixelGenerator:vide
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_hob.tdf
     Info (12023): Found entity 1: mux_hob File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/mux_hob.tdf Line: 23
 Info (12128): Elaborating entity "mux_hob" for hierarchy "pixelGenerator:videoGen|tankAROM:colorsA|altsyncram:altsyncram_component|altsyncram_o881:auto_generated|mux_hob:mux2" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_o881.tdf Line: 41
-Info (12128): Elaborating entity "tankBROM" for hierarchy "pixelGenerator:videoGen|tankBROM:colorsB" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 60
+Info (12128): Elaborating entity "tankBROM" for hierarchy "pixelGenerator:videoGen|tankBROM:colorsB" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 61
 Info (12128): Elaborating entity "altsyncram" for hierarchy "pixelGenerator:videoGen|tankBROM:colorsB|altsyncram:altsyncram_component" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankBROM.vhd Line: 84
 Info (12130): Elaborated megafunction instantiation "pixelGenerator:videoGen|tankBROM:colorsB|altsyncram:altsyncram_component" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankBROM.vhd Line: 84
 Info (12133): Instantiated megafunction "pixelGenerator:videoGen|tankBROM:colorsB|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankBROM.vhd Line: 84
@@ -826,7 +993,7 @@ Info (12128): Elaborating entity "altsyncram_ba81" for hierarchy "pixelGenerator
 Warning (12125): Using design file bulletuprom.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: BulletUpROM-SYN File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletuprom.vhd Line: 52
     Info (12023): Found entity 1: BulletUpROM File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletuprom.vhd Line: 42
-Info (12128): Elaborating entity "BulletUpROM" for hierarchy "pixelGenerator:videoGen|BulletUpROM:colorsC" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 62
+Info (12128): Elaborating entity "BulletUpROM" for hierarchy "pixelGenerator:videoGen|BulletUpROM:colorsC" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 63
 Info (12128): Elaborating entity "altsyncram" for hierarchy "pixelGenerator:videoGen|BulletUpROM:colorsC|altsyncram:altsyncram_component" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletuprom.vhd Line: 84
 Info (12130): Elaborated megafunction instantiation "pixelGenerator:videoGen|BulletUpROM:colorsC|altsyncram:altsyncram_component" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletuprom.vhd Line: 84
 Info (12133): Instantiated megafunction "pixelGenerator:videoGen|BulletUpROM:colorsC|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletuprom.vhd Line: 84
@@ -849,7 +1016,7 @@ Info (12128): Elaborating entity "altsyncram_fi81" for hierarchy "pixelGenerator
 Warning (12125): Using design file bulletdownrom.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: BulletDownROM-SYN File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletdownrom.vhd Line: 52
     Info (12023): Found entity 1: BulletDownROM File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletdownrom.vhd Line: 42
-Info (12128): Elaborating entity "BulletDownROM" for hierarchy "pixelGenerator:videoGen|BulletDownROM:colorsD" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 64
+Info (12128): Elaborating entity "BulletDownROM" for hierarchy "pixelGenerator:videoGen|BulletDownROM:colorsD" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 65
 Info (12128): Elaborating entity "altsyncram" for hierarchy "pixelGenerator:videoGen|BulletDownROM:colorsD|altsyncram:altsyncram_component" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletdownrom.vhd Line: 84
 Info (12130): Elaborated megafunction instantiation "pixelGenerator:videoGen|BulletDownROM:colorsD|altsyncram:altsyncram_component" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletdownrom.vhd Line: 84
 Info (12133): Instantiated megafunction "pixelGenerator:videoGen|BulletDownROM:colorsD|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletdownrom.vhd Line: 84
@@ -869,21 +1036,72 @@ Info (12133): Instantiated megafunction "pixelGenerator:videoGen|BulletDownROM:c
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2p81.tdf
     Info (12023): Found entity 1: altsyncram_2p81 File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_2p81.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_2p81" for hierarchy "pixelGenerator:videoGen|BulletDownROM:colorsD|altsyncram:altsyncram_component|altsyncram_2p81:auto_generated" File: f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "backROM" for hierarchy "pixelGenerator:videoGen|backROM:colorsF" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 67
+Info (12128): Elaborating entity "altsyncram" for hierarchy "pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/backROM.vhd Line: 84
+Info (12130): Elaborated megafunction instantiation "pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/backROM.vhd Line: 84
+Info (12133): Instantiated megafunction "pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/backROM.vhd Line: 84
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "backROM.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "65535"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "widthad_a" = "16"
+    Info (12134): Parameter "width_a" = "24"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4881.tdf
+    Info (12023): Found entity 1: altsyncram_4881 File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_4881.tdf Line: 32
+Info (12128): Elaborating entity "altsyncram_4881" for hierarchy "pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component|altsyncram_4881:auto_generated" File: f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_k8a.tdf
+    Info (12023): Found entity 1: decode_k8a File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/decode_k8a.tdf Line: 23
+Info (12128): Elaborating entity "decode_k8a" for hierarchy "pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component|altsyncram_4881:auto_generated|decode_k8a:rden_decode" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_4881.tdf Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_pob.tdf
+    Info (12023): Found entity 1: mux_pob File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/mux_pob.tdf Line: 23
+Info (12128): Elaborating entity "mux_pob" for hierarchy "pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component|altsyncram_4881:auto_generated|mux_pob:mux2" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_4881.tdf Line: 41
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:videoSync" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/VGA_top_level.vhd Line: 73
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "pixelGenerator:videoGen|Mod1" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 74
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "pixelGenerator:videoGen|Mod0" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 74
+Info (12130): Elaborated megafunction instantiation "pixelGenerator:videoGen|lpm_divide:Mod1" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 74
+Info (12133): Instantiated megafunction "pixelGenerator:videoGen|lpm_divide:Mod1" with the following parameter: File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 74
+    Info (12134): Parameter "LPM_WIDTHN" = "31"
+    Info (12134): Parameter "LPM_WIDTHD" = "31"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_icm.tdf
+    Info (12023): Found entity 1: lpm_divide_icm File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/lpm_divide_icm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_7nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_7nh File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/sign_div_unsign_7nh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_2af.tdf
+    Info (12023): Found entity 1: alt_u_div_2af File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/alt_u_div_2af.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/add_sub_7pc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/add_sub_8pc.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "pixelGenerator:videoGen|lpm_divide:Mod0" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 74
+Info (12133): Instantiated megafunction "pixelGenerator:videoGen|lpm_divide:Mod0" with the following parameter: File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 74
+    Info (12134): Parameter "LPM_WIDTHN" = "31"
+    Info (12134): Parameter "LPM_WIDTHD" = "31"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "RESET_N" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/VGA_top_level.vhd Line: 8
-Info (21057): Implemented 572 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1146 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 28 output pins
-    Info (21061): Implemented 398 logic cells
-    Info (21064): Implemented 144 RAM segments
+    Info (21061): Implemented 780 logic cells
+    Info (21064): Implemented 336 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 721 megabytes
-    Info: Processing ended: Sat Nov 11 15:12:40 2017
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 752 megabytes
+    Info: Processing ended: Sun Nov 12 10:14:37 2017
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:21
 
 

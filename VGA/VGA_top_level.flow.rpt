@@ -1,5 +1,5 @@
 Flow report for VGA_top_level
-Sat Nov 11 15:13:02 2017
+Sun Nov 12 10:15:08 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,20 +41,20 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat Nov 11 15:12:59 2017       ;
+; Flow Status                        ; Successful - Sun Nov 12 10:15:05 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; VGA_top_level                               ;
 ; Top-level Entity Name              ; VGA_top_level                               ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 373 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 361 / 114,480 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 99 / 114,480 ( < 1 % )                      ;
-; Total registers                    ; 99                                          ;
+; Total logic elements               ; 749 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 725 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 134 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 134                                         ;
 ; Total pins                         ; 30 / 529 ( 6 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 502,944 / 3,981,312 ( 13 % )                ;
+; Total memory bits                  ; 2,075,784 / 3,981,312 ( 52 % )              ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/11/2017 15:12:31 ;
+; Start date & time ; 11/12/2017 10:14:25 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; VGA_top_level       ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 123478081063641.151043475015600        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 123478081063641.151050326505584        ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --             ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
@@ -93,11 +93,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:10     ; 1.0                     ; 721 MB              ; 00:00:19                           ;
-; Fitter                    ; 00:00:14     ; 1.0                     ; 1725 MB             ; 00:00:23                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 577 MB              ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.1                     ; 760 MB              ; 00:00:02                           ;
-; Total                     ; 00:00:29     ; --                      ; --                  ; 00:00:47                           ;
+; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 752 MB              ; 00:00:20                           ;
+; Fitter                    ; 00:00:23     ; 1.1                     ; 1739 MB             ; 00:00:37                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 588 MB              ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.2                     ; 780 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:39     ; --                      ; --                  ; 00:01:02                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -16,8 +16,9 @@ end entity pixelGenerator;
 architecture behavioral of pixelGenerator is
 
 signal colorAddress : std_logic_vector (13 downto 0);
-signal colorAddInter : integer;
-signal colorA, colorB, colorC, colorD : std_logic_vector (23 downto 0);
+signal colorAddTrans : std_logic_vector (15 downto 0);
+signal colorAddInter, colorAddIntTrans : integer;
+signal colorA, colorB, colorC, colorD, colorF : std_logic_vector (23 downto 0);
 
 signal pixel_row_int, pixel_column_int : natural;
 signal TankAx, TankAy : integer;
@@ -56,26 +57,29 @@ begin
 --------------------------------------------------------------------------------------------
 
 	colorsA : tankAROM
-		port map(colorAddress, ROM_clk, colorA);
+		port map(colorAddress(13 downto 0), ROM_clk, colorA);
 	colorsB : tankBROM
-		port map(colorAddress, ROM_clk, colorB);
+		port map(colorAddress(13 downto 0), ROM_clk, colorB);
 	colorsC : BulletUpROM
 		port map(colorAddress(8 downto 0), ROM_clk, colorC);
 	colorsD : BulletDownROM
 		port map(colorAddress(8 downto 0), ROM_clk, colorD);
+	colorsF : backROM
+		port map(colorAddTrans, ROM_clk, colorF);
 
 --------------------------------------------------------------------------------------------
-
 	pixelDraw : process(clk, rst_n) is
 	begin
 		if (rising_edge(clk)) then
+			colorAddIntTrans <= ((pixel_row_int mod (BACK_HEIGHT-1))-1)*BACK_WIDTH + (pixel_column_int mod (BACK_WIDTH-1));
+			colorAddTrans <= std_logic_vector(to_unsigned(colorAddIntTrans, 16));
 			if (pixel_row_int < TankAyLim and pixel_row_int > TankAy and pixel_column_int < TankAxLim and pixel_column_int >= TankAx) then
 				colorAddInter <= ((pixel_row_int-(TankAy+1))*TANK_WIDTH)+(pixel_column_int-TankAx);
 				colorAddress <= std_logic_vector(to_unsigned(colorAddInter, 14));
 				if (colorA = CHROMA_KEY) then
-					red_out <= CLEAR_COLOR(23 downto 16);
-					green_out <= CLEAR_COLOR(15 downto 8);
-					blue_out <= CLEAR_COLOR(7 downto 0);
+					red_out <= colorF(23 downto 16);
+					green_out <= colorF(15 downto 8);
+					blue_out <= colorF(7 downto 0);
 				else
 					red_out <= colorA(23 downto 16);
 					green_out <= colorA(15 downto 8);
@@ -85,9 +89,9 @@ begin
 				colorAddInter <= ((pixel_row_int-(TankBy+1))*TANK_WIDTH)+(pixel_column_int-TankBx);
 				colorAddress <= std_logic_vector(to_unsigned(colorAddInter, 14));
 				if (colorB = CHROMA_KEY) then
-					red_out <= CLEAR_COLOR(23 downto 16);
-					green_out <= CLEAR_COLOR(15 downto 8);
-					blue_out <= CLEAR_COLOR(7 downto 0);
+					red_out <= colorF(23 downto 16);
+					green_out <= colorF(15 downto 8);
+					blue_out <= colorF(7 downto 0);
 				else
 					red_out <= colorB(23 downto 16);
 					green_out <= colorB(15 downto 8);
@@ -97,9 +101,9 @@ begin
 				colorAddInter <= ((pixel_row_int-(BullAyint+1))*BULLET_WIDTH)+(pixel_column_int-BullAxint);
 				colorAddress <= std_logic_vector(to_unsigned(colorAddInter, 14));
 				if (colorC = CHROMA_KEY) then
-					red_out <= CLEAR_COLOR(23 downto 16);
-					green_out <= CLEAR_COLOR(15 downto 8);
-					blue_out <= CLEAR_COLOR(7 downto 0);
+					red_out <= colorF(23 downto 16);
+					green_out <= colorF(15 downto 8);
+					blue_out <= colorF(7 downto 0);
 				else
 					red_out <= colorC(23 downto 16);
 					green_out <= colorC(15 downto 8);
@@ -109,18 +113,18 @@ begin
 				colorAddInter <= ((pixel_row_int-(BullByint+1))*BULLET_WIDTH)+(pixel_column_int-BullBxint);
 				colorAddress <= std_logic_vector(to_unsigned(colorAddInter, 14));
 				if (colorD = CHROMA_KEY) then
-					red_out <= CLEAR_COLOR(23 downto 16);
-					green_out <= CLEAR_COLOR(15 downto 8);
-					blue_out <= CLEAR_COLOR(7 downto 0);
+					red_out <= colorF(23 downto 16);
+					green_out <= colorF(15 downto 8);
+					blue_out <= colorF(7 downto 0);
 				else
 					red_out <= colorD(23 downto 16);
 					green_out <= colorD(15 downto 8);
 					blue_out <= colorD(7 downto 0);
 				end if;
 			else
-				red_out <= CLEAR_COLOR(23 downto 16);
-				green_out <= CLEAR_COLOR(15 downto 8);
-				blue_out <= CLEAR_COLOR(7 downto 0);
+				red_out <= colorF(23 downto 16);
+				green_out <= colorF(15 downto 8);
+				blue_out <= colorF(7 downto 0);
 			end if;
 
 		end if;

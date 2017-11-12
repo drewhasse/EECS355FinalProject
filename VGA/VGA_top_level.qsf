@@ -83,6 +83,7 @@ set_location_assignment PIN_AB28 -to RESET_N
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VHDL_FILE backROM.vhd
 set_global_assignment -name VHDL_FILE tankBROM.vhd
 set_global_assignment -name VHDL_FILE tankAROM.vhd
 set_global_assignment -name VHDL_FILE ../tank_pack.vhd

@@ -7,6 +7,8 @@ package tank_pack is
   constant TANK_HEIGHT : natural := 105;
   constant BULLET_HEIGHT : natural := 50;
   constant BULLET_WIDTH : natural := 8;
+  constant BACK_WIDTH : natural := 256;
+  constant BACK_HEIGHT : natural := 256;
   constant CLEAR_COLOR : std_logic_vector(23 downto 0) := "000000000000000000000000";
   constant CHROMA_KEY : std_logic_vector(23 downto 0) := "111111001111110011111100";
   component tankAROM is
@@ -42,6 +44,14 @@ package tank_pack is
     q       : OUT STD_LOGIC_VECTOR (23 DOWNTO 0)
   );
   end component BulletDownROM;
+
+  component backROM
+  port (
+    address : IN  STD_LOGIC_VECTOR (15 DOWNTO 0);
+    clock   : IN  STD_LOGIC  := '1';
+    q       : OUT STD_LOGIC_VECTOR (23 DOWNTO 0)
+  );
+  end component backROM;
 
 end package tank_pack;
 package body tank_pack is

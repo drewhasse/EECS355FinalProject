@@ -40,8 +40,6 @@ signal pixel_column_int 									: std_logic_vector(9 downto 0);
 signal video_on_int											: std_logic;
 signal VGA_clk_int											: std_logic;
 signal eof													: std_logic;
-
---Temporary posistions for drawn elements
 constant zeroVec : std_logic_vector(9 downto 0) := "0000000101";
 constant topVec : std_logic_vector(9 downto 0) := "0101110111";
 constant bullyVec : std_logic_vector(9 downto 0) := "0010111110";
@@ -53,10 +51,10 @@ begin
 --------------------------------------------------------------------------------------------
 
 	videoGen : pixelGenerator
-		port map(zeroVec, topVec, -- Tank A
-		 				 zeroVec, zeroVec, -- Tank B
-						 bullxVec, bullyVec2, -- Bullet A
-						 bullxVec, bullyVec, -- Bullet B
+		port map(zeroVec, topVec,
+		 				 zeroVec, zeroVec,
+						 bullxVec, bullyVec2,
+						 bullxVec, bullyVec,
 						 CLOCK_50,
 						 VGA_clk_int,
 						 RESET_N,
