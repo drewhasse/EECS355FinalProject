@@ -15,20 +15,21 @@ architecture behavioral of tank_tb is
       color  : std_logic_vector(9 downto 0)
     );
     port (
-      x          : in  std_logic_vector(9 downto 0);
+      clk        : in std_logic;
+      reset      : in std_logic;
+      pulse      : in std_logic;
       speed      : in  std_logic_vector(1 downto 0);
-      moveDir    : in  std_logic;
-      visible    : in  std_logic;
-      xnew       : out std_logic_vector(9 downto 0);
-      moveDirNew : out std_logic
+      isLoser    : in  std_logic;
+      xout       : out std_logic_vector(9 downto 0)
     );
 end component tank;
-  signal x_tb          : std_logic_vector(9 downto 0);
+  signal hold : std_logic := '0';
+  signal clk_tb : std_logic;
+  signal reset_tb : std_logic;
+  signal pulse_tb : std_logic;
   signal speed_tb      : std_logic_vector(1 downto 0);
-  signal moveDir_tb    : std_logic;
-  signal visible_tb    : std_logic;
-  signal xnew_tb       : std_logic_vector(9 downto 0);
-  signal moveDirNew_tb : std_logic;
+  signal isLoser_tb    : std_logic;
+  signal xout_tb       : std_logic_vector(9 downto 0);
 
   begin
     dut : tank
@@ -38,34 +39,63 @@ end component tank;
         height => std_logic_vector(to_signed(TANK_HEIGHT, 6)),
         color  => "0000000000"
       )
+
       port map (
-        x          => x_tb,
+        clk        => clk_tb,
+        reset      => reset_tb,
+        pulse      => pulse_tb,
         speed      => speed_tb,
-        moveDir    => moveDir_tb,
-        visible    => visible_tb,
-        xnew       => xnew_tb,
-        moveDirNew => moveDirNew_tb
+        isLoser    => isLoser_tb,
+        xout       => xout_tb
       );
 
-    stim_speed : process is
-    begin
-      speed_tb <= "01"; wait for 5 ns;
-      wait;
-    end process;
+    clock_generate: process is
+      begin
+        clk_tb <= '0';
+        wait for 1 ns;
+        clk_tb <= not clk_tb;
+        wait for 1 ns;
+        if hold = '1' then
+          wait;
+        end if;
+      end process clock_generate;
 
-    stim_x : process is
-    begin
-      x_tb <= "0000000001"; wait for 5 ns;
-      x_tb <= std_logic_vector(to_unsigned(640, 10)); wait for 5 ns;
-      wait;
-    end process;
+      stim_pulse : process is
+      begin
+        pulse_tb <= '0';
+        wait for 4 ns;
+        pulse_tb <= not pulse_tb;
+        wait for 4 ns;
+        if hold = '1' then
+          wait;
+        end if;
+      end process;
 
-    stim_moveDir : process is
-    begin
-      moveDir_tb <= '0';
-      visible_tb <= '0';
-      wait;
-    end process;
+      stim_speed : process is
+      begin
+        speed_tb <= "01"; wait for 8 ns;
+        wait;
+      end process;
+
+      stim_reset : process is
+      begin
+        reset_tb <= '1'; wait for 1 ns;
+        reset_tb <= '0';
+        wait;
+      end process;
+
+      stim_isLower : process is
+      begin
+        isLoser_tb <= '0';
+        wait;
+      end process;
+
+      stop_clk : process is
+      begin
+        wait for 300 ns;
+        hold <= '1';
+        wait;
+      end process;
 
 
 end architecture;

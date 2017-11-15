@@ -15,10 +15,9 @@ entity tank is
         reset : in std_logic;
         pulse : in std_logic;
         speed : in std_logic_vector(1 downto 0);
-        moveDir : in std_logic;
         isLoser : in std_logic;
-        xnew : out std_logic_vector(9 downto 0);
-        moveDirNew : out std_logic
+        xout : out std_logic_vector(9 downto 0)
+        --moveDirNew : out std_logic
   );
 end entity;
 
@@ -26,7 +25,10 @@ architecture behavioral of tank is
 
   type state is (idle, update, lost, waitOnPulseLow);
   signal moveDirNew_c : std_logic;
+  signal moveDirNew : std_logic;
+  signal xnew : std_logic_vector(9 downto 0);
   signal xnew_c : std_logic_vector(9 downto 0);
+  signal current_s, next_s : state;
 
 begin
 
@@ -37,14 +39,15 @@ begin
         moveDirNew <= '0';
         current_s <= idle;
       elsif (rising_edge(clk)) then
+        xout <= xnew_c;
         xnew <= xnew_c;
         moveDirNew <= moveDirNew_c;
         current_s <= next_s;
       end if;
     end process;
 
-  TankCombProc: process(current_s, moveDirNew, xnew, speed, isLoser) is
-    
+  TankCombProc: process(current_s, moveDirNew, xnew, speed, isLoser, pulse) is
+
     variable x_int : integer;
     variable width_int : integer;
 
@@ -63,7 +66,7 @@ begin
           xnew_c <= xnew;
           if (pulse = '0') then
             next_s <= idle;
-          elsif (pulse = '1') then
+          else
             next_s <= update;
           end if;
 

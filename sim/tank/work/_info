@@ -9,25 +9,25 @@ z2
 cModel Technology
 dD:/Drew/Northwestern/EECS 361/Processor/Project 2 SingleCycle/eecs361/Datapath/sim
 Etank
-Z0 w1510721960
-Z1 DPx4 work 9 tank_pack 0 22 jODkBOMV5X]VQ=LH6Tilm0
+Z0 w1510759643
+Z1 DPx4 work 9 tank_pack 0 22 ;RcOM=>hmZI7QHO;FN_3o2
 Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 Z5 dD:/github/EECS355FinalProject/sim/tank
-Z6 8D:/github/EECS355FinalProject/tank.vhd
-Z7 FD:/github/EECS355FinalProject/tank.vhd
+Z6 8D:\github\EECS355FinalProject\tank.vhd
+Z7 FD:\github\EECS355FinalProject\tank.vhd
 l0
 L6
-Vjfj1BSgcz8X;0loFIdD3T1
-!s100 24??ETkc6^c]BzmFDTRC41
+V:o`hT=dOnK1CQ06i1oVUi1
+!s100 60?3NZnONoE_J9a]QOAI03
 Z8 OV;C;10.5b;63
 32
-Z9 !s110 1510721964
+Z9 !s110 1510760098
 !i10b 1
-Z10 !s108 1510721964.000000
-Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/github/EECS355FinalProject/tank.vhd|
-Z12 !s107 D:/github/EECS355FinalProject/tank.vhd|
+Z10 !s108 1510760098.000000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:\github\EECS355FinalProject\tank.vhd|
+Z12 !s107 D:\github\EECS355FinalProject\tank.vhd|
 !i113 1
 Z13 o-work work -2002 -explicit
 Z14 tExplicit 1 CvgOpt 0
@@ -36,11 +36,11 @@ R1
 R2
 R3
 R4
-DEx4 work 4 tank 0 22 jfj1BSgcz8X;0loFIdD3T1
-l24
-L23
-V_Rl<GO4g?[FG6bUEAzSJD3
-!s100 TmNijCO[SBzcWNJDoHUhJ3
+DEx4 work 4 tank 0 22 :o`hT=dOnK1CQ06i1oVUi1
+l33
+L24
+VADQS@PcCD50h7namK;UDN0
+!s100 F86eLG=lH_j]1INnzk31?3
 R8
 32
 R9
@@ -55,21 +55,21 @@ Ptank_pack
 R2
 R3
 R4
-Z15 w1510694733
+Z15 w1510722407
 R5
 Z16 8D:/github/EECS355FinalProject/VGA/tank_pack.vhd
 Z17 FD:/github/EECS355FinalProject/VGA/tank_pack.vhd
 l0
 L5
-VjODkBOMV5X]VQ=LH6Tilm0
-!s100 69C6aUZ9f`a1=CVddTEmd0
+V;RcOM=>hmZI7QHO;FN_3o2
+!s100 LkaUcL57=<BSRNS@75`8=2
 R8
 32
-R9
+Z18 !s110 1510760099
 !i10b 1
-R10
-Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/github/EECS355FinalProject/VGA/tank_pack.vhd|
-Z19 !s107 D:/github/EECS355FinalProject/VGA/tank_pack.vhd|
+Z19 !s108 1510760099.000000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/github/EECS355FinalProject/VGA/tank_pack.vhd|
+Z21 !s107 D:/github/EECS355FinalProject/VGA/tank_pack.vhd|
 !i113 1
 R13
 R14
@@ -79,28 +79,28 @@ R2
 R3
 R4
 l0
-L58
-Z20 V3^_OiD8]L2f:LiF<0`2Jf0
-Z21 !s100 8TVHZd6bLlgO3B=9cJRIA1
+L59
+Z22 VglSR>HLZ@nZ9Q]NdjXZW53
+Z23 !s100 2`[[zgHQmdMH>=mB1SWPn0
 R8
 32
-R9
-!i10b 1
-R10
 R18
+!i10b 1
 R19
+R20
+R21
 !i113 1
 R13
 R14
 Etank_tb
-Z22 w1510697209
+Z24 w1510760094
 R1
 R2
 R3
 R4
 R5
-Z23 8D:/github/EECS355FinalProject/sim/tank/tank_tb.vhd
-Z24 FD:/github/EECS355FinalProject/sim/tank/tank_tb.vhd
+Z25 8D:/github/EECS355FinalProject/sim/tank/tank_tb.vhd
+Z26 FD:/github/EECS355FinalProject/sim/tank/tank_tb.vhd
 l0
 L6
 V58nHX26WZFkDjZcG=fBMD1
@@ -110,8 +110,8 @@ R8
 R9
 !i10b 1
 R10
-Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/github/EECS355FinalProject/sim/tank/tank_tb.vhd|
-Z26 !s107 D:/github/EECS355FinalProject/sim/tank/tank_tb.vhd|
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/github/EECS355FinalProject/sim/tank/tank_tb.vhd|
+Z28 !s107 D:/github/EECS355FinalProject/sim/tank/tank_tb.vhd|
 !i113 1
 R13
 R14
@@ -121,17 +121,17 @@ R2
 R3
 R4
 DEx4 work 7 tank_tb 0 22 58nHX26WZFkDjZcG=fBMD1
-l33
+l34
 L9
-V97Ngfa5j8RoD_1RPc;FR43
-!s100 991H`_J^5[WDLTA274e:h3
+V7JK@ifjJ<^H3noZF]eK4_0
+!s100 5WS;Y7e;^h:Vdal=YJcfM0
 R8
 32
 R9
 !i10b 1
 R10
-R25
-R26
+R27
+R28
 !i113 1
 R13
 R14
