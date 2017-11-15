@@ -15,19 +15,19 @@ Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 Z5 dD:/github/EECS355FinalProject/sim/tank
-Z6 8D:\github\EECS355FinalProject\tank.vhd
-Z7 FD:\github\EECS355FinalProject\tank.vhd
+Z6 8D:/github/EECS355FinalProject/tank.vhd
+Z7 FD:/github/EECS355FinalProject/tank.vhd
 l0
 L6
 V:o`hT=dOnK1CQ06i1oVUi1
 !s100 60?3NZnONoE_J9a]QOAI03
 Z8 OV;C;10.5b;63
 32
-Z9 !s110 1510760098
+Z9 !s110 1510768863
 !i10b 1
-Z10 !s108 1510760098.000000
-Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:\github\EECS355FinalProject\tank.vhd|
-Z12 !s107 D:\github\EECS355FinalProject\tank.vhd|
+Z10 !s108 1510768863.000000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/github/EECS355FinalProject/tank.vhd|
+Z12 !s107 D:/github/EECS355FinalProject/tank.vhd|
 !i113 1
 Z13 o-work work -2002 -explicit
 Z14 tExplicit 1 CvgOpt 0
@@ -65,11 +65,11 @@ V;RcOM=>hmZI7QHO;FN_3o2
 !s100 LkaUcL57=<BSRNS@75`8=2
 R8
 32
-Z18 !s110 1510760099
+R9
 !i10b 1
-Z19 !s108 1510760099.000000
-Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/github/EECS355FinalProject/VGA/tank_pack.vhd|
-Z21 !s107 D:/github/EECS355FinalProject/VGA/tank_pack.vhd|
+R10
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/github/EECS355FinalProject/VGA/tank_pack.vhd|
+Z19 !s107 D:/github/EECS355FinalProject/VGA/tank_pack.vhd|
 !i113 1
 R13
 R14
@@ -80,27 +80,27 @@ R3
 R4
 l0
 L59
-Z22 VglSR>HLZ@nZ9Q]NdjXZW53
-Z23 !s100 2`[[zgHQmdMH>=mB1SWPn0
+Z20 VglSR>HLZ@nZ9Q]NdjXZW53
+Z21 !s100 2`[[zgHQmdMH>=mB1SWPn0
 R8
 32
-R18
+R9
 !i10b 1
+R10
+R18
 R19
-R20
-R21
 !i113 1
 R13
 R14
 Etank_tb
-Z24 w1510760094
+Z22 w1510768857
 R1
 R2
 R3
 R4
 R5
-Z25 8D:/github/EECS355FinalProject/sim/tank/tank_tb.vhd
-Z26 FD:/github/EECS355FinalProject/sim/tank/tank_tb.vhd
+Z23 8D:/github/EECS355FinalProject/sim/tank/tank_tb.vhd
+Z24 FD:/github/EECS355FinalProject/sim/tank/tank_tb.vhd
 l0
 L6
 V58nHX26WZFkDjZcG=fBMD1
@@ -109,9 +109,9 @@ R8
 32
 R9
 !i10b 1
-R10
-Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/github/EECS355FinalProject/sim/tank/tank_tb.vhd|
-Z28 !s107 D:/github/EECS355FinalProject/sim/tank/tank_tb.vhd|
+Z25 !s108 1510768862.000000
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/github/EECS355FinalProject/sim/tank/tank_tb.vhd|
+Z27 !s107 D:/github/EECS355FinalProject/sim/tank/tank_tb.vhd|
 !i113 1
 R13
 R14
@@ -123,15 +123,15 @@ R4
 DEx4 work 7 tank_tb 0 22 58nHX26WZFkDjZcG=fBMD1
 l34
 L9
-V7JK@ifjJ<^H3noZF]eK4_0
-!s100 5WS;Y7e;^h:Vdal=YJcfM0
+VM7PBcCBg1S:Cj:QSz72R32
+!s100 G:aBW1h5l^dRAlPPg2oPQ1
 R8
 32
 R9
 !i10b 1
-R10
+R25
+R26
 R27
-R28
 !i113 1
 R13
 R14

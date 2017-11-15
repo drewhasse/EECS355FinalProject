@@ -63,9 +63,9 @@ end component tank;
       stim_pulse : process is
       begin
         pulse_tb <= '0';
-        wait for 4 ns;
+        wait for 20 ns;
         pulse_tb <= not pulse_tb;
-        wait for 4 ns;
+        wait for 20 ns;
         if hold = '1' then
           wait;
         end if;
@@ -80,6 +80,8 @@ end component tank;
       stim_reset : process is
       begin
         reset_tb <= '1'; wait for 1 ns;
+        reset_tb <= '0'; wait for 100 ns;
+        reset_tb <= '1'; wait for 1 ns;
         reset_tb <= '0';
         wait;
       end process;
@@ -87,12 +89,13 @@ end component tank;
       stim_isLower : process is
       begin
         isLoser_tb <= '0';
+        --wait for 250 ns; isLoser_tb <= '1';
         wait;
       end process;
 
       stop_clk : process is
       begin
-        wait for 300 ns;
+        wait for 6 ms;
         hold <= '1';
         wait;
       end process;
