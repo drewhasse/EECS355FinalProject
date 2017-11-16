@@ -5,6 +5,8 @@ use IEEE.numeric_std.all;
 package tank_pack is
   constant TANK_WIDTH : natural := 96;
   constant TANK_HEIGHT : natural := 105;
+  constant TANKA_Y : std_logic_vector(9 downto 0) := "0000001010";
+  constant TANKB_Y : std_logic_vector(9 downto 0) := std_logic_vector(to_unsigned(380, 10));
   constant TANK_INITIAL_X : natural := 320;
   constant SPEED_FACTOR : natural := 10;
   constant BULLET_HEIGHT : natural := 50;
@@ -80,7 +82,7 @@ package tank_pack is
   end component bullet;
 
   component tank
-  generic ()
+  generic (
     width : std_logic_vector(5 downto 0)
   );
   port (
@@ -92,6 +94,25 @@ package tank_pack is
     xout    : out std_logic_vector(9 downto 0)          --moveDirNew : out std_logic
   );
   end component tank;
+
+  component GraphicsOut
+  port (
+    Ax, Ay, Bx, By, BAx, BAy, BBx, BBy        : in std_logic_vector(9 downto 0);
+    CLOCK_50 : in  std_logic;
+    RESET_N  : in  std_logic;
+    VGA_BLUE : out std_logic_vector(7 downto 0);
+    VGA_CLK  : out std_logic
+  );
+  end component GraphicsOut;
+
+  component counter
+  port (
+    clk   : in  std_logic;
+    reset : in  std_logic;
+    hold  : in  std_logic;
+    pulse : out std_logic
+  );
+end component counter;
 
 
 
