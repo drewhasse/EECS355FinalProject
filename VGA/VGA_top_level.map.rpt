@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGA_top_level
-Sun Nov 12 10:14:37 2017
+Tue Nov 14 15:57:50 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -61,7 +61,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Nov 12 10:14:37 2017       ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 14 15:57:50 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; VGA_top_level                               ;
 ; Top-level Entity Name              ; VGA_top_level                               ;
@@ -169,68 +169,64 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                            ;
-+----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                              ; Library ;
-+----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
-; backROM.vhd                      ; yes             ; User Wizard-Generated File             ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/backROM.vhd                ;         ;
-; tankBROM.vhd                     ; yes             ; User Wizard-Generated File             ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankBROM.vhd               ;         ;
-; tankAROM.vhd                     ; yes             ; User Wizard-Generated File             ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankAROM.vhd               ;         ;
-; ../tank_pack.vhd                 ; yes             ; User VHDL File                         ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/tank_pack.vhd                               ;         ;
-; VGA_top_level.vhd                ; yes             ; User VHDL File                         ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/VGA_top_level.vhd          ;         ;
-; pixelGenerator.vhd               ; yes             ; User VHDL File                         ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd         ;         ;
-; vga_sync.vhd                     ; yes             ; User VHDL File                         ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/vga_sync.vhd               ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf                                     ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/stratix_ram_block.inc                              ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mux.inc                                        ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_decode.inc                                     ;         ;
-; aglobal170.inc                   ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/aglobal170.inc                                     ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_rdenreg.inc                                      ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altrom.inc                                         ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altram.inc                                         ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altdpram.inc                                       ;         ;
-; db/altsyncram_o881.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_o881.tdf     ;         ;
-; tankrom.mif                      ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankrom.mif                ;         ;
-; db/decode_c8a.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/decode_c8a.tdf          ;         ;
-; db/mux_hob.tdf                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/mux_hob.tdf             ;         ;
-; db/altsyncram_ba81.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_ba81.tdf     ;         ;
-; tankrom2.mif                     ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankrom2.mif               ;         ;
-; bulletuprom.vhd                  ; yes             ; Auto-Found Wizard-Generated File       ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletuprom.vhd            ;         ;
-; db/altsyncram_fi81.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_fi81.tdf     ;         ;
-; bulletuprom.mif                  ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletuprom.mif            ;         ;
-; bulletdownrom.vhd                ; yes             ; Auto-Found Wizard-Generated File       ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletdownrom.vhd          ;         ;
-; db/altsyncram_2p81.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_2p81.tdf     ;         ;
-; bulletdownrom.mif                ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletdownrom.mif          ;         ;
-; db/altsyncram_4881.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_4881.tdf     ;         ;
-; backrom.mif                      ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/backrom.mif                ;         ;
-; db/decode_k8a.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/decode_k8a.tdf          ;         ;
-; db/mux_pob.tdf                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/mux_pob.tdf             ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_divide.tdf                                     ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/abs_divider.inc                                    ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                           ; f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sign_div_unsign.inc                                ;         ;
-; db/lpm_divide_icm.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/lpm_divide_icm.tdf      ;         ;
-; db/sign_div_unsign_7nh.tdf       ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/sign_div_unsign_7nh.tdf ;         ;
-; db/alt_u_div_2af.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/alt_u_div_2af.tdf       ;         ;
-; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/add_sub_7pc.tdf         ;         ;
-; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/add_sub_8pc.tdf         ;         ;
-+----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                               ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
+; backROM.vhd                      ; yes             ; User Wizard-Generated File             ; D:/github/EECS355FinalProject/VGA/backROM.vhd                                ;         ;
+; tankBROM.vhd                     ; yes             ; User Wizard-Generated File             ; D:/github/EECS355FinalProject/VGA/tankBROM.vhd                               ;         ;
+; tankAROM.vhd                     ; yes             ; User Wizard-Generated File             ; D:/github/EECS355FinalProject/VGA/tankAROM.vhd                               ;         ;
+; ../tank_pack.vhd                 ; yes             ; User VHDL File                         ; D:/github/EECS355FinalProject/VGA/tank_pack.vhd                              ;         ;
+; VGA_top_level.vhd                ; yes             ; User VHDL File                         ; D:/github/EECS355FinalProject/VGA/VGA_top_level.vhd                          ;         ;
+; pixelGenerator.vhd               ; yes             ; User VHDL File                         ; D:/github/EECS355FinalProject/VGA/pixelGenerator.vhd                         ;         ;
+; vga_sync.vhd                     ; yes             ; User VHDL File                         ; D:/github/EECS355FinalProject/VGA/vga_sync.vhd                               ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal170.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/aglobal170.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_o881.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/github/EECS355FinalProject/VGA/db/altsyncram_o881.tdf                     ;         ;
+; tankrom.mif                      ; yes             ; Auto-Found Memory Initialization File  ; D:/github/EECS355FinalProject/VGA/tankrom.mif                                ;         ;
+; db/decode_c8a.tdf                ; yes             ; Auto-Generated Megafunction            ; D:/github/EECS355FinalProject/VGA/db/decode_c8a.tdf                          ;         ;
+; db/mux_hob.tdf                   ; yes             ; Auto-Generated Megafunction            ; D:/github/EECS355FinalProject/VGA/db/mux_hob.tdf                             ;         ;
+; db/altsyncram_ba81.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/github/EECS355FinalProject/VGA/db/altsyncram_ba81.tdf                     ;         ;
+; tankrom2.mif                     ; yes             ; Auto-Found Memory Initialization File  ; D:/github/EECS355FinalProject/VGA/tankrom2.mif                               ;         ;
+; bulletuprom.vhd                  ; yes             ; Auto-Found Wizard-Generated File       ; D:/github/EECS355FinalProject/VGA/bulletuprom.vhd                            ;         ;
+; db/altsyncram_fi81.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/github/EECS355FinalProject/VGA/db/altsyncram_fi81.tdf                     ;         ;
+; bulletuprom.mif                  ; yes             ; Auto-Found Memory Initialization File  ; D:/github/EECS355FinalProject/VGA/bulletuprom.mif                            ;         ;
+; bulletdownrom.vhd                ; yes             ; Auto-Found Wizard-Generated File       ; D:/github/EECS355FinalProject/VGA/bulletdownrom.vhd                          ;         ;
+; db/altsyncram_2p81.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/github/EECS355FinalProject/VGA/db/altsyncram_2p81.tdf                     ;         ;
+; bulletdownrom.mif                ; yes             ; Auto-Found Memory Initialization File  ; D:/github/EECS355FinalProject/VGA/bulletdownrom.mif                          ;         ;
+; db/altsyncram_4881.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/github/EECS355FinalProject/VGA/db/altsyncram_4881.tdf                     ;         ;
+; backrom.mif                      ; yes             ; Auto-Found Memory Initialization File  ; D:/github/EECS355FinalProject/VGA/backrom.mif                                ;         ;
+; db/decode_k8a.tdf                ; yes             ; Auto-Generated Megafunction            ; D:/github/EECS355FinalProject/VGA/db/decode_k8a.tdf                          ;         ;
+; db/mux_pob.tdf                   ; yes             ; Auto-Generated Megafunction            ; D:/github/EECS355FinalProject/VGA/db/mux_pob.tdf                             ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
+; db/lpm_divide_icm.tdf            ; yes             ; Auto-Generated Megafunction            ; D:/github/EECS355FinalProject/VGA/db/lpm_divide_icm.tdf                      ;         ;
+; db/sign_div_unsign_7nh.tdf       ; yes             ; Auto-Generated Megafunction            ; D:/github/EECS355FinalProject/VGA/db/sign_div_unsign_7nh.tdf                 ;         ;
+; db/alt_u_div_2af.tdf             ; yes             ; Auto-Generated Megafunction            ; D:/github/EECS355FinalProject/VGA/db/alt_u_div_2af.tdf                       ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction            ; D:/github/EECS355FinalProject/VGA/db/add_sub_7pc.tdf                         ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction            ; D:/github/EECS355FinalProject/VGA/db/add_sub_8pc.tdf                         ;         ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------------------------------+
@@ -914,40 +910,40 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Nov 12 10:14:25 2017
+    Info: Processing started: Tue Nov 14 15:57:31 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA_top_level -c VGA_top_level
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file backrom.vhd
-    Info (12022): Found design unit 1: backROM-SYN File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/backROM.vhd Line: 52
-    Info (12023): Found entity 1: backROM File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/backROM.vhd Line: 42
+    Info (12022): Found design unit 1: backROM-SYN File: D:/github/EECS355FinalProject/VGA/backROM.vhd Line: 52
+    Info (12023): Found entity 1: backROM File: D:/github/EECS355FinalProject/VGA/backROM.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file tankbrom.vhd
-    Info (12022): Found design unit 1: tankBROM-SYN File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankBROM.vhd Line: 52
-    Info (12023): Found entity 1: tankBROM File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankBROM.vhd Line: 42
+    Info (12022): Found design unit 1: tankBROM-SYN File: D:/github/EECS355FinalProject/VGA/tankBROM.vhd Line: 52
+    Info (12023): Found entity 1: tankBROM File: D:/github/EECS355FinalProject/VGA/tankBROM.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file tankarom.vhd
-    Info (12022): Found design unit 1: tankAROM-SYN File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankAROM.vhd Line: 52
-    Info (12023): Found entity 1: tankAROM File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankAROM.vhd Line: 42
-Info (12021): Found 2 design units, including 0 entities, in source file /users/graehme/documents/college/eecs 355/localfinalproject/tank_pack.vhd
-    Info (12022): Found design unit 1: tank_pack File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/tank_pack.vhd Line: 5
-    Info (12022): Found design unit 2: tank_pack-body File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/tank_pack.vhd Line: 57
+    Info (12022): Found design unit 1: tankAROM-SYN File: D:/github/EECS355FinalProject/VGA/tankAROM.vhd Line: 52
+    Info (12023): Found entity 1: tankAROM File: D:/github/EECS355FinalProject/VGA/tankAROM.vhd Line: 42
+Info (12021): Found 2 design units, including 0 entities, in source file tank_pack.vhd
+    Info (12022): Found design unit 1: tank_pack File: D:/github/EECS355FinalProject/VGA/tank_pack.vhd Line: 5
+    Info (12022): Found design unit 2: tank_pack-body File: D:/github/EECS355FinalProject/VGA/tank_pack.vhd Line: 58
 Info (12021): Found 2 design units, including 1 entities, in source file vga_top_level.vhd
-    Info (12022): Found design unit 1: VGA_top_level-structural File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/VGA_top_level.vhd Line: 17
-    Info (12023): Found entity 1: VGA_top_level File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/VGA_top_level.vhd Line: 5
+    Info (12022): Found design unit 1: VGA_top_level-structural File: D:/github/EECS355FinalProject/VGA/VGA_top_level.vhd Line: 17
+    Info (12023): Found entity 1: VGA_top_level File: D:/github/EECS355FinalProject/VGA/VGA_top_level.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file colorrom.vhd
-    Info (12022): Found design unit 1: colorrom-SYN File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/colorROM.vhd Line: 52
-    Info (12023): Found entity 1: colorROM File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/colorROM.vhd Line: 42
+    Info (12022): Found design unit 1: colorrom-SYN File: D:/github/EECS355FinalProject/VGA/colorROM.vhd Line: 52
+    Info (12023): Found entity 1: colorROM File: D:/github/EECS355FinalProject/VGA/colorROM.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file pixelgenerator.vhd
-    Info (12022): Found design unit 1: pixelGenerator-behavioral File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 16
-    Info (12023): Found entity 1: pixelGenerator File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 7
+    Info (12022): Found design unit 1: pixelGenerator-behavioral File: D:/github/EECS355FinalProject/VGA/pixelGenerator.vhd Line: 16
+    Info (12023): Found entity 1: pixelGenerator File: D:/github/EECS355FinalProject/VGA/pixelGenerator.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file vga_sync.vhd
-    Info (12022): Found design unit 1: VGA_SYNC-behavioral File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/vga_sync.vhd Line: 16
-    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/vga_sync.vhd Line: 7
+    Info (12022): Found design unit 1: VGA_SYNC-behavioral File: D:/github/EECS355FinalProject/VGA/vga_sync.vhd Line: 16
+    Info (12023): Found entity 1: VGA_SYNC File: D:/github/EECS355FinalProject/VGA/vga_sync.vhd Line: 7
 Info (12127): Elaborating entity "VGA_top_level" for the top level hierarchy
-Info (12128): Elaborating entity "pixelGenerator" for hierarchy "pixelGenerator:videoGen" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/VGA_top_level.vhd Line: 53
-Info (12128): Elaborating entity "tankAROM" for hierarchy "pixelGenerator:videoGen|tankAROM:colorsA" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 59
-Info (12128): Elaborating entity "altsyncram" for hierarchy "pixelGenerator:videoGen|tankAROM:colorsA|altsyncram:altsyncram_component" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankAROM.vhd Line: 84
-Info (12130): Elaborated megafunction instantiation "pixelGenerator:videoGen|tankAROM:colorsA|altsyncram:altsyncram_component" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankAROM.vhd Line: 84
-Info (12133): Instantiated megafunction "pixelGenerator:videoGen|tankAROM:colorsA|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankAROM.vhd Line: 84
+Info (12128): Elaborating entity "pixelGenerator" for hierarchy "pixelGenerator:videoGen" File: D:/github/EECS355FinalProject/VGA/VGA_top_level.vhd Line: 53
+Info (12128): Elaborating entity "tankAROM" for hierarchy "pixelGenerator:videoGen|tankAROM:colorsA" File: D:/github/EECS355FinalProject/VGA/pixelGenerator.vhd Line: 59
+Info (12128): Elaborating entity "altsyncram" for hierarchy "pixelGenerator:videoGen|tankAROM:colorsA|altsyncram:altsyncram_component" File: D:/github/EECS355FinalProject/VGA/tankAROM.vhd Line: 84
+Info (12130): Elaborated megafunction instantiation "pixelGenerator:videoGen|tankAROM:colorsA|altsyncram:altsyncram_component" File: D:/github/EECS355FinalProject/VGA/tankAROM.vhd Line: 84
+Info (12133): Instantiated megafunction "pixelGenerator:videoGen|tankAROM:colorsA|altsyncram:altsyncram_component" with the following parameter: File: D:/github/EECS355FinalProject/VGA/tankAROM.vhd Line: 84
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "init_file" = "tankROM.mif"
@@ -962,18 +958,18 @@ Info (12133): Instantiated megafunction "pixelGenerator:videoGen|tankAROM:colors
     Info (12134): Parameter "width_a" = "24"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_o881.tdf
-    Info (12023): Found entity 1: altsyncram_o881 File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_o881.tdf Line: 32
-Info (12128): Elaborating entity "altsyncram_o881" for hierarchy "pixelGenerator:videoGen|tankAROM:colorsA|altsyncram:altsyncram_component|altsyncram_o881:auto_generated" File: f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+    Info (12023): Found entity 1: altsyncram_o881 File: D:/github/EECS355FinalProject/VGA/db/altsyncram_o881.tdf Line: 32
+Info (12128): Elaborating entity "altsyncram_o881" for hierarchy "pixelGenerator:videoGen|tankAROM:colorsA|altsyncram:altsyncram_component|altsyncram_o881:auto_generated" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_c8a.tdf
-    Info (12023): Found entity 1: decode_c8a File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/decode_c8a.tdf Line: 23
-Info (12128): Elaborating entity "decode_c8a" for hierarchy "pixelGenerator:videoGen|tankAROM:colorsA|altsyncram:altsyncram_component|altsyncram_o881:auto_generated|decode_c8a:rden_decode" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_o881.tdf Line: 40
+    Info (12023): Found entity 1: decode_c8a File: D:/github/EECS355FinalProject/VGA/db/decode_c8a.tdf Line: 23
+Info (12128): Elaborating entity "decode_c8a" for hierarchy "pixelGenerator:videoGen|tankAROM:colorsA|altsyncram:altsyncram_component|altsyncram_o881:auto_generated|decode_c8a:rden_decode" File: D:/github/EECS355FinalProject/VGA/db/altsyncram_o881.tdf Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_hob.tdf
-    Info (12023): Found entity 1: mux_hob File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/mux_hob.tdf Line: 23
-Info (12128): Elaborating entity "mux_hob" for hierarchy "pixelGenerator:videoGen|tankAROM:colorsA|altsyncram:altsyncram_component|altsyncram_o881:auto_generated|mux_hob:mux2" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_o881.tdf Line: 41
-Info (12128): Elaborating entity "tankBROM" for hierarchy "pixelGenerator:videoGen|tankBROM:colorsB" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 61
-Info (12128): Elaborating entity "altsyncram" for hierarchy "pixelGenerator:videoGen|tankBROM:colorsB|altsyncram:altsyncram_component" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankBROM.vhd Line: 84
-Info (12130): Elaborated megafunction instantiation "pixelGenerator:videoGen|tankBROM:colorsB|altsyncram:altsyncram_component" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankBROM.vhd Line: 84
-Info (12133): Instantiated megafunction "pixelGenerator:videoGen|tankBROM:colorsB|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/tankBROM.vhd Line: 84
+    Info (12023): Found entity 1: mux_hob File: D:/github/EECS355FinalProject/VGA/db/mux_hob.tdf Line: 23
+Info (12128): Elaborating entity "mux_hob" for hierarchy "pixelGenerator:videoGen|tankAROM:colorsA|altsyncram:altsyncram_component|altsyncram_o881:auto_generated|mux_hob:mux2" File: D:/github/EECS355FinalProject/VGA/db/altsyncram_o881.tdf Line: 41
+Info (12128): Elaborating entity "tankBROM" for hierarchy "pixelGenerator:videoGen|tankBROM:colorsB" File: D:/github/EECS355FinalProject/VGA/pixelGenerator.vhd Line: 61
+Info (12128): Elaborating entity "altsyncram" for hierarchy "pixelGenerator:videoGen|tankBROM:colorsB|altsyncram:altsyncram_component" File: D:/github/EECS355FinalProject/VGA/tankBROM.vhd Line: 84
+Info (12130): Elaborated megafunction instantiation "pixelGenerator:videoGen|tankBROM:colorsB|altsyncram:altsyncram_component" File: D:/github/EECS355FinalProject/VGA/tankBROM.vhd Line: 84
+Info (12133): Instantiated megafunction "pixelGenerator:videoGen|tankBROM:colorsB|altsyncram:altsyncram_component" with the following parameter: File: D:/github/EECS355FinalProject/VGA/tankBROM.vhd Line: 84
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "init_file" = "tankROM2.mif"
@@ -988,15 +984,15 @@ Info (12133): Instantiated megafunction "pixelGenerator:videoGen|tankBROM:colors
     Info (12134): Parameter "width_a" = "24"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ba81.tdf
-    Info (12023): Found entity 1: altsyncram_ba81 File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_ba81.tdf Line: 32
-Info (12128): Elaborating entity "altsyncram_ba81" for hierarchy "pixelGenerator:videoGen|tankBROM:colorsB|altsyncram:altsyncram_component|altsyncram_ba81:auto_generated" File: f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+    Info (12023): Found entity 1: altsyncram_ba81 File: D:/github/EECS355FinalProject/VGA/db/altsyncram_ba81.tdf Line: 32
+Info (12128): Elaborating entity "altsyncram_ba81" for hierarchy "pixelGenerator:videoGen|tankBROM:colorsB|altsyncram:altsyncram_component|altsyncram_ba81:auto_generated" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Warning (12125): Using design file bulletuprom.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: BulletUpROM-SYN File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletuprom.vhd Line: 52
-    Info (12023): Found entity 1: BulletUpROM File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletuprom.vhd Line: 42
-Info (12128): Elaborating entity "BulletUpROM" for hierarchy "pixelGenerator:videoGen|BulletUpROM:colorsC" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 63
-Info (12128): Elaborating entity "altsyncram" for hierarchy "pixelGenerator:videoGen|BulletUpROM:colorsC|altsyncram:altsyncram_component" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletuprom.vhd Line: 84
-Info (12130): Elaborated megafunction instantiation "pixelGenerator:videoGen|BulletUpROM:colorsC|altsyncram:altsyncram_component" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletuprom.vhd Line: 84
-Info (12133): Instantiated megafunction "pixelGenerator:videoGen|BulletUpROM:colorsC|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletuprom.vhd Line: 84
+    Info (12022): Found design unit 1: BulletUpROM-SYN File: D:/github/EECS355FinalProject/VGA/bulletuprom.vhd Line: 52
+    Info (12023): Found entity 1: BulletUpROM File: D:/github/EECS355FinalProject/VGA/bulletuprom.vhd Line: 42
+Info (12128): Elaborating entity "BulletUpROM" for hierarchy "pixelGenerator:videoGen|BulletUpROM:colorsC" File: D:/github/EECS355FinalProject/VGA/pixelGenerator.vhd Line: 63
+Info (12128): Elaborating entity "altsyncram" for hierarchy "pixelGenerator:videoGen|BulletUpROM:colorsC|altsyncram:altsyncram_component" File: D:/github/EECS355FinalProject/VGA/bulletuprom.vhd Line: 84
+Info (12130): Elaborated megafunction instantiation "pixelGenerator:videoGen|BulletUpROM:colorsC|altsyncram:altsyncram_component" File: D:/github/EECS355FinalProject/VGA/bulletuprom.vhd Line: 84
+Info (12133): Instantiated megafunction "pixelGenerator:videoGen|BulletUpROM:colorsC|altsyncram:altsyncram_component" with the following parameter: File: D:/github/EECS355FinalProject/VGA/bulletuprom.vhd Line: 84
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "init_file" = "BulletUpROM.mif"
@@ -1011,15 +1007,15 @@ Info (12133): Instantiated megafunction "pixelGenerator:videoGen|BulletUpROM:col
     Info (12134): Parameter "width_a" = "24"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_fi81.tdf
-    Info (12023): Found entity 1: altsyncram_fi81 File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_fi81.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_fi81" for hierarchy "pixelGenerator:videoGen|BulletUpROM:colorsC|altsyncram:altsyncram_component|altsyncram_fi81:auto_generated" File: f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+    Info (12023): Found entity 1: altsyncram_fi81 File: D:/github/EECS355FinalProject/VGA/db/altsyncram_fi81.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_fi81" for hierarchy "pixelGenerator:videoGen|BulletUpROM:colorsC|altsyncram:altsyncram_component|altsyncram_fi81:auto_generated" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Warning (12125): Using design file bulletdownrom.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: BulletDownROM-SYN File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletdownrom.vhd Line: 52
-    Info (12023): Found entity 1: BulletDownROM File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletdownrom.vhd Line: 42
-Info (12128): Elaborating entity "BulletDownROM" for hierarchy "pixelGenerator:videoGen|BulletDownROM:colorsD" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 65
-Info (12128): Elaborating entity "altsyncram" for hierarchy "pixelGenerator:videoGen|BulletDownROM:colorsD|altsyncram:altsyncram_component" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletdownrom.vhd Line: 84
-Info (12130): Elaborated megafunction instantiation "pixelGenerator:videoGen|BulletDownROM:colorsD|altsyncram:altsyncram_component" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletdownrom.vhd Line: 84
-Info (12133): Instantiated megafunction "pixelGenerator:videoGen|BulletDownROM:colorsD|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/bulletdownrom.vhd Line: 84
+    Info (12022): Found design unit 1: BulletDownROM-SYN File: D:/github/EECS355FinalProject/VGA/bulletdownrom.vhd Line: 52
+    Info (12023): Found entity 1: BulletDownROM File: D:/github/EECS355FinalProject/VGA/bulletdownrom.vhd Line: 42
+Info (12128): Elaborating entity "BulletDownROM" for hierarchy "pixelGenerator:videoGen|BulletDownROM:colorsD" File: D:/github/EECS355FinalProject/VGA/pixelGenerator.vhd Line: 65
+Info (12128): Elaborating entity "altsyncram" for hierarchy "pixelGenerator:videoGen|BulletDownROM:colorsD|altsyncram:altsyncram_component" File: D:/github/EECS355FinalProject/VGA/bulletdownrom.vhd Line: 84
+Info (12130): Elaborated megafunction instantiation "pixelGenerator:videoGen|BulletDownROM:colorsD|altsyncram:altsyncram_component" File: D:/github/EECS355FinalProject/VGA/bulletdownrom.vhd Line: 84
+Info (12133): Instantiated megafunction "pixelGenerator:videoGen|BulletDownROM:colorsD|altsyncram:altsyncram_component" with the following parameter: File: D:/github/EECS355FinalProject/VGA/bulletdownrom.vhd Line: 84
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "init_file" = "BulletDownROM.mif"
@@ -1034,12 +1030,12 @@ Info (12133): Instantiated megafunction "pixelGenerator:videoGen|BulletDownROM:c
     Info (12134): Parameter "width_a" = "24"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2p81.tdf
-    Info (12023): Found entity 1: altsyncram_2p81 File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_2p81.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_2p81" for hierarchy "pixelGenerator:videoGen|BulletDownROM:colorsD|altsyncram:altsyncram_component|altsyncram_2p81:auto_generated" File: f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "backROM" for hierarchy "pixelGenerator:videoGen|backROM:colorsF" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 67
-Info (12128): Elaborating entity "altsyncram" for hierarchy "pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/backROM.vhd Line: 84
-Info (12130): Elaborated megafunction instantiation "pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/backROM.vhd Line: 84
-Info (12133): Instantiated megafunction "pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/backROM.vhd Line: 84
+    Info (12023): Found entity 1: altsyncram_2p81 File: D:/github/EECS355FinalProject/VGA/db/altsyncram_2p81.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_2p81" for hierarchy "pixelGenerator:videoGen|BulletDownROM:colorsD|altsyncram:altsyncram_component|altsyncram_2p81:auto_generated" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "backROM" for hierarchy "pixelGenerator:videoGen|backROM:colorsF" File: D:/github/EECS355FinalProject/VGA/pixelGenerator.vhd Line: 67
+Info (12128): Elaborating entity "altsyncram" for hierarchy "pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component" File: D:/github/EECS355FinalProject/VGA/backROM.vhd Line: 84
+Info (12130): Elaborated megafunction instantiation "pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component" File: D:/github/EECS355FinalProject/VGA/backROM.vhd Line: 84
+Info (12133): Instantiated megafunction "pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component" with the following parameter: File: D:/github/EECS355FinalProject/VGA/backROM.vhd Line: 84
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "init_file" = "backROM.mif"
@@ -1054,36 +1050,36 @@ Info (12133): Instantiated megafunction "pixelGenerator:videoGen|backROM:colorsF
     Info (12134): Parameter "width_a" = "24"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4881.tdf
-    Info (12023): Found entity 1: altsyncram_4881 File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_4881.tdf Line: 32
-Info (12128): Elaborating entity "altsyncram_4881" for hierarchy "pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component|altsyncram_4881:auto_generated" File: f:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+    Info (12023): Found entity 1: altsyncram_4881 File: D:/github/EECS355FinalProject/VGA/db/altsyncram_4881.tdf Line: 32
+Info (12128): Elaborating entity "altsyncram_4881" for hierarchy "pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component|altsyncram_4881:auto_generated" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_k8a.tdf
-    Info (12023): Found entity 1: decode_k8a File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/decode_k8a.tdf Line: 23
-Info (12128): Elaborating entity "decode_k8a" for hierarchy "pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component|altsyncram_4881:auto_generated|decode_k8a:rden_decode" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_4881.tdf Line: 40
+    Info (12023): Found entity 1: decode_k8a File: D:/github/EECS355FinalProject/VGA/db/decode_k8a.tdf Line: 23
+Info (12128): Elaborating entity "decode_k8a" for hierarchy "pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component|altsyncram_4881:auto_generated|decode_k8a:rden_decode" File: D:/github/EECS355FinalProject/VGA/db/altsyncram_4881.tdf Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_pob.tdf
-    Info (12023): Found entity 1: mux_pob File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/mux_pob.tdf Line: 23
-Info (12128): Elaborating entity "mux_pob" for hierarchy "pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component|altsyncram_4881:auto_generated|mux_pob:mux2" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/altsyncram_4881.tdf Line: 41
-Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:videoSync" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/VGA_top_level.vhd Line: 73
+    Info (12023): Found entity 1: mux_pob File: D:/github/EECS355FinalProject/VGA/db/mux_pob.tdf Line: 23
+Info (12128): Elaborating entity "mux_pob" for hierarchy "pixelGenerator:videoGen|backROM:colorsF|altsyncram:altsyncram_component|altsyncram_4881:auto_generated|mux_pob:mux2" File: D:/github/EECS355FinalProject/VGA/db/altsyncram_4881.tdf Line: 41
+Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:videoSync" File: D:/github/EECS355FinalProject/VGA/VGA_top_level.vhd Line: 73
 Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "pixelGenerator:videoGen|Mod1" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 74
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "pixelGenerator:videoGen|Mod0" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 74
-Info (12130): Elaborated megafunction instantiation "pixelGenerator:videoGen|lpm_divide:Mod1" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 74
-Info (12133): Instantiated megafunction "pixelGenerator:videoGen|lpm_divide:Mod1" with the following parameter: File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 74
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "pixelGenerator:videoGen|Mod1" File: D:/github/EECS355FinalProject/VGA/pixelGenerator.vhd Line: 74
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "pixelGenerator:videoGen|Mod0" File: D:/github/EECS355FinalProject/VGA/pixelGenerator.vhd Line: 74
+Info (12130): Elaborated megafunction instantiation "pixelGenerator:videoGen|lpm_divide:Mod1" File: D:/github/EECS355FinalProject/VGA/pixelGenerator.vhd Line: 74
+Info (12133): Instantiated megafunction "pixelGenerator:videoGen|lpm_divide:Mod1" with the following parameter: File: D:/github/EECS355FinalProject/VGA/pixelGenerator.vhd Line: 74
     Info (12134): Parameter "LPM_WIDTHN" = "31"
     Info (12134): Parameter "LPM_WIDTHD" = "31"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_icm.tdf
-    Info (12023): Found entity 1: lpm_divide_icm File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/lpm_divide_icm.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_icm File: D:/github/EECS355FinalProject/VGA/db/lpm_divide_icm.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_7nh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_7nh File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/sign_div_unsign_7nh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_7nh File: D:/github/EECS355FinalProject/VGA/db/sign_div_unsign_7nh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_2af.tdf
-    Info (12023): Found entity 1: alt_u_div_2af File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/alt_u_div_2af.tdf Line: 27
+    Info (12023): Found entity 1: alt_u_div_2af File: D:/github/EECS355FinalProject/VGA/db/alt_u_div_2af.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
-    Info (12023): Found entity 1: add_sub_7pc File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/add_sub_7pc.tdf Line: 23
+    Info (12023): Found entity 1: add_sub_7pc File: D:/github/EECS355FinalProject/VGA/db/add_sub_7pc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
-    Info (12023): Found entity 1: add_sub_8pc File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/db/add_sub_8pc.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "pixelGenerator:videoGen|lpm_divide:Mod0" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 74
-Info (12133): Instantiated megafunction "pixelGenerator:videoGen|lpm_divide:Mod0" with the following parameter: File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/pixelGenerator.vhd Line: 74
+    Info (12023): Found entity 1: add_sub_8pc File: D:/github/EECS355FinalProject/VGA/db/add_sub_8pc.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "pixelGenerator:videoGen|lpm_divide:Mod0" File: D:/github/EECS355FinalProject/VGA/pixelGenerator.vhd Line: 74
+Info (12133): Instantiated megafunction "pixelGenerator:videoGen|lpm_divide:Mod0" with the following parameter: File: D:/github/EECS355FinalProject/VGA/pixelGenerator.vhd Line: 74
     Info (12134): Parameter "LPM_WIDTHN" = "31"
     Info (12134): Parameter "LPM_WIDTHD" = "31"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -1092,16 +1088,16 @@ Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "RESET_N" File: C:/Users/Graehme/Documents/College/EECS 355/LocalFinalProject/Mini_project_vga/VGA_top_level.vhd Line: 8
+    Warning (15610): No output dependent on input pin "RESET_N" File: D:/github/EECS355FinalProject/VGA/VGA_top_level.vhd Line: 8
 Info (21057): Implemented 1146 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 28 output pins
     Info (21061): Implemented 780 logic cells
     Info (21064): Implemented 336 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 752 megabytes
-    Info: Processing ended: Sun Nov 12 10:14:37 2017
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Peak virtual memory: 763 megabytes
+    Info: Processing ended: Tue Nov 14 15:57:50 2017
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:34
 
 

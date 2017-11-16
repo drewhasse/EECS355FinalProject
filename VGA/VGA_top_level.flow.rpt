@@ -1,5 +1,5 @@
 Flow report for VGA_top_level
-Sun Nov 12 10:15:08 2017
+Tue Nov 14 15:58:45 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Nov 12 10:15:05 2017       ;
+; Flow Status                        ; Successful - Tue Nov 14 15:58:38 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; VGA_top_level                               ;
 ; Top-level Entity Name              ; VGA_top_level                               ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/12/2017 10:14:25 ;
+; Start date & time ; 11/14/2017 15:57:32 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; VGA_top_level       ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 123478081063641.151050326505584        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 273063039741811.151069665111248        ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --             ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
@@ -93,11 +93,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 752 MB              ; 00:00:20                           ;
-; Fitter                    ; 00:00:23     ; 1.1                     ; 1739 MB             ; 00:00:37                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 588 MB              ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.2                     ; 780 MB              ; 00:00:02                           ;
-; Total                     ; 00:00:39     ; --                      ; --                  ; 00:01:02                           ;
+; Analysis & Synthesis      ; 00:00:19     ; 1.0                     ; 763 MB              ; 00:00:33                           ;
+; Fitter                    ; 00:00:35     ; 1.0                     ; 1331 MB             ; 00:00:43                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 608 MB              ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:05     ; 1.1                     ; 740 MB              ; 00:00:05                           ;
+; Total                     ; 00:01:05     ; --                      ; --                  ; 00:01:27                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -106,10 +106,10 @@ agreement for further details.
 +---------------------------+------------------+------------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; DeepBlue         ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                    ; DeepBlue         ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler                 ; DeepBlue         ; Windows 10 ; 10.0       ; x86_64         ;
-; TimeQuest Timing Analyzer ; DeepBlue         ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis      ; DREW-ASUS        ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; DREW-ASUS        ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; DREW-ASUS        ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; DREW-ASUS        ; Windows 10 ; 10.0       ; x86_64         ;
 +---------------------------+------------------+------------+------------+----------------+
 
 

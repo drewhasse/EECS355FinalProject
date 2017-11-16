@@ -5,6 +5,8 @@ use IEEE.numeric_std.all;
 package tank_pack is
   constant TANK_WIDTH : natural := 96;
   constant TANK_HEIGHT : natural := 105;
+  constant TANK_INITIAL_X : natural := 320;
+  constant SPEED_FACTOR : natural := 10;
   constant BULLET_HEIGHT : natural := 50;
   constant BULLET_WIDTH : natural := 8;
   constant BACK_WIDTH : natural := 256;
