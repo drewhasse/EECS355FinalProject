@@ -29,7 +29,7 @@ port (
 end entity bullet;
 
 architecture behavioral of bullet is
-TYPE state is (idle,update,waitOnPulseLow,bullet_check,output);
+TYPE state is (idle,fire_state,update,waitOnPulseLow,bullet_check,output);
 signal current,next_state : state;
 signal next_active : std_logic;
 signal next_y : std_logic_vector (8 downto 0);
@@ -95,20 +95,16 @@ case (current) is
 		
 	when update =>
 	
-	if(current_active = '1') then
-		if (bullet_direction = '0') then
-			y_int := to_integer(signed(current_y)) + 5;
-			next_y <= std_logic_vector(to_signed(y_int,9));
-		elsif (bullet_direction = '1') then
-			y_int := to_integer(signed(current_y)) - 5;
-			next_y <= std_logic_vector(to_signed(y_int,9));
-		else
-			next_y <= current_y;
-		end if;
-		next_state <= bullet_check;
+	if (bullet_direction = '0') then
+		y_int := to_integer(signed(current_y)) + 5;
+		next_y <= std_logic_vector(to_signed(y_int,9));
+	elsif (bullet_direction = '1') then
+		y_int := to_integer(signed(current_y)) - 5;
+		next_y <= std_logic_vector(to_signed(y_int,9));
 	else
-		next_state <= bullet_check;
+		next_y <= current_y;
 	end if;
+	next_state <= bullet_check;
 
 	when bullet_check =>
 
@@ -148,6 +144,8 @@ end process;
 						
 		
 end architecture behavioral;
+	
+	
 	
 	
 	
