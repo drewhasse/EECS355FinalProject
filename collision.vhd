@@ -9,13 +9,24 @@ port (
 	tank_y : in std_logic_vector (8 downto 0);
 	bullet_x : in std_logic_vector(9 downto 0);
 	bullet_y : in std_logic_vector(8 downto 0);
+	clk : in std_logic;
+	reset : in std_logic;
+	pulse : in std_logic;
 	is_hit : out std_logic 
 );
 end entity;
 
 architecture behavioral of collision is
-
+signal is_hit_c: std_logic;
+type collision_states is (idle, calculation, collision);
+signal state: collision_states;
 begin
+
+clocking: process(clk, reset) is 
+	begin
+		
+
+	end process;
 
 detection: process(tank_x, tank_y, bullet_x, bullet_y) is 
 	begin
