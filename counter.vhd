@@ -15,7 +15,7 @@ end entity;
 architecture behavioral of counter is
 type state is (increment, hold_s);
 signal current_s, next_s : state;
-signal count, count_c : std_logic_vector(18 downto 0);
+signal count, count_c : std_logic_vector(17 downto 0);
 signal pulseint,  pulseint_c : std_logic;
 begin
   clocked : process(clk, reset) is
@@ -32,8 +32,8 @@ begin
   end process clocked;
 
   combinational : process(count, pulseint) is
-    constant one : std_logic_vector(18 downto 0) := (0 => '1', others => '0');
-    constant zero : std_logic_vector(18 downto 0) := (others => '0');
+    constant one : std_logic_vector(17 downto 0) := (0 => '1', others => '0');
+    constant zero : std_logic_vector(17 downto 0) := (others => '0');
     begin
     --Internal state signals
     count_c <= count;

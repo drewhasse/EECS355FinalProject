@@ -75,9 +75,9 @@ begin
             xnew_c <= std_logic_vector(to_unsigned(to_integer(unsigned(xnew)) - to_integer(unsigned(speed))*SPEED_FACTOR, 10));
           end if;
 
-          if (x_int < 0 + width_int/2 and moveDirNew = '1') then --x is negative and moving left
+          if (x_int <= 0 and moveDirNew = '1') then --x is negative and moving left
             moveDirNew_c <= '0';
-          elsif (x_int > 639 - width_int/2 and moveDirNew = '0') then
+          elsif ((x_int > (639 - width_int)) and moveDirNew = '0') then
             moveDirNew_c <= '1';
           else
             moveDirNew_c <= moveDirNew;
