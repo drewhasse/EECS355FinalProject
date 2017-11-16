@@ -7,8 +7,7 @@ generic (
 	w : std_logic_vector (3 downto 0);
 	h : std_logic_vector (3 downto 0);
 	rgb_color : std_logic_vector (9 downto 0);
-	tank_w : std_logic_vector (5 downto 0);
-	tank_h : std_logic_vector (5 downto 0);
+	tank_y_pos : in std_logic_vector (8 downto 0);
 	bullet_direction : std_logic
 );
 port (
@@ -16,11 +15,8 @@ port (
 	reset : in std_logic;
 	pulse : in std_logic;
 	fire : in std_logic;
-	current_x_pos : in std_logic_vector (9 downto 0);
-	current_y_pos : in std_logic_vector (8 downto 0);
 	current_bullet_active : in std_logic;
 	tank_x_pos : in std_logic_vector (9 downto 0);
-	tank_y_pos : in std_logic_vector (8 downto 0);
 	collision : in std_logic;
 	next_bullet_active : out std_logic;
 	next_y_pos : out std_logic_vector (8 downto 0);
@@ -29,7 +25,7 @@ port (
 end entity bullet;
 
 architecture behavioral of bullet is
-TYPE state is (idle,fire_state,update,waitOnPulseLow,bullet_check,output);
+TYPE state is (idle,update,waitOnPulseLow,bullet_check);
 signal current,next_state : state;
 signal next_active : std_logic;
 signal next_y : std_logic_vector (8 downto 0);
@@ -73,7 +69,6 @@ next_active <= current_active;
 
 case (current) is 
 	when idle =>
-
 	if(pulse = '0') then
 		next_state <= idle;
 	else
@@ -144,6 +139,8 @@ end process;
 						
 		
 end architecture behavioral;
+	
+	
 	
 	
 	
