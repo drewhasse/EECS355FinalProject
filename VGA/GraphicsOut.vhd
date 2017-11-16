@@ -4,12 +4,12 @@ use IEEE.std_logic_1164.all;
 
 entity GraphicsOut is
 	port(
-			Ax, Ay, Bx, By, BAx, BAy, BBx, BBy : std_logic_vector(9 downto 0);
-			CLOCK_50 										: in std_logic;
-			RESET_N											: in std_logic;
+			Ax, Ay, Bx, By, BAx, BAy, BBx, BBy        : std_logic_vector(9 downto 0);
+			CLOCK_50                                  : in std_logic;
+			RESET_N                                   : in std_logic;
 			--VGA
-			VGA_RED, VGA_GREEN, VGA_BLUE 					: out std_logic_vector(7 downto 0);
-			HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK		: out std_logic
+			VGA_RED, VGA_GREEN, VGA_BLUE              : out std_logic_vector(7 downto 0);
+			HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK : out std_logic
 
 		);
 end entity GraphicsOut;
@@ -19,9 +19,9 @@ architecture structural of GraphicsOut is
 component pixelGenerator is
 	port(
 			Ax, Ay, Bx, By, BullAx, BullAy, BullBx, BullBy : in std_logic_vector(9 downto 0);
-			clk, ROM_clk, rst_n, video_on, eof 				: in std_logic;
-			pixel_row, pixel_column						    : in std_logic_vector(9 downto 0);
-			red_out, green_out, blue_out					: out std_logic_vector(7 downto 0)
+			clk, ROM_clk, rst_n, video_on, eof             : in std_logic;
+			pixel_row, pixel_column                        : in std_logic_vector(9 downto 0);
+			red_out, green_out, blue_out                   : out std_logic_vector(7 downto 0)
 		);
 end component pixelGenerator;
 
@@ -35,16 +35,11 @@ component VGA_SYNC is
 end component VGA_SYNC;
 
 --Signals for VGA sync
-signal pixel_row_int 										: std_logic_vector(9 downto 0);
-signal pixel_column_int 									: std_logic_vector(9 downto 0);
-signal video_on_int											: std_logic;
-signal VGA_clk_int											: std_logic;
-signal eof													: std_logic;
-constant zeroVec : std_logic_vector(9 downto 0) := "0000000101";
-constant topVec : std_logic_vector(9 downto 0) := "0101110111";
-constant bullyVec : std_logic_vector(9 downto 0) := "0010111110";
-constant bullyVec2 : std_logic_vector(9 downto 0) := "0100000100";
-constant bullxVec : std_logic_vector(9 downto 0) := "0000110000";
+signal pixel_row_int    : std_logic_vector(9 downto 0);
+signal pixel_column_int : std_logic_vector(9 downto 0);
+signal video_on_int     : std_logic;
+signal VGA_clk_int      : std_logic;
+signal eof              : std_logic;
 
 begin
 
