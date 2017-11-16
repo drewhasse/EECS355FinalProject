@@ -80,8 +80,7 @@ package tank_pack is
   end component bullet;
 
   component tank
-  generic (
-    y : std_logic_vector(8 downto 0);
+  generic ()
     width : std_logic_vector(5 downto 0)
   );
   port (

@@ -5,7 +5,6 @@ use work.tank_pack.all;
 
 entity tank is
   generic (
-           y : std_logic_vector(8 downto 0);
            width : std_logic_vector(5 downto 0)
   );
   port (
