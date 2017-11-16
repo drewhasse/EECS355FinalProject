@@ -48,3 +48,19 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name VHDL_FILE vga_sync.vhd
+set_global_assignment -name VHDL_FILE tank_pack.vhd
+set_global_assignment -name VHDL_FILE tank_game.vhd
+set_global_assignment -name VHDL_FILE tankBROM.vhd
+set_global_assignment -name VHDL_FILE tankAROM.vhd
+set_global_assignment -name VHDL_FILE tank.vhd
+set_global_assignment -name VHDL_FILE pixelGenerator.vhd
+set_global_assignment -name VHDL_FILE GraphicsOut.vhd
+set_global_assignment -name VHDL_FILE counter.vhd
+set_global_assignment -name VHDL_FILE collision.vhd
+set_global_assignment -name VHDL_FILE BulletUpROM.vhd
+set_global_assignment -name VHDL_FILE BulletDownROM.vhd
+set_global_assignment -name VHDL_FILE bullet.vhd
+set_global_assignment -name VHDL_FILE backROM.vhd
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
