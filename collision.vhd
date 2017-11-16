@@ -18,7 +18,7 @@ end entity;
 
 architecture behavioral of collision is
 signal is_hit_c, is_hit_next: std_logic;
-type collision_states is (idle, calculation, waitOnPulseLow);
+type collision_states is (idle, calculation, waitOnPulseLowCollision, waitOnPulseLowNoCollision);
 signal current_state, next_state: collision_states;
 
 
@@ -26,10 +26,9 @@ begin
 
 CollisionClkProc: process(clk, reset) is 
 	begin
-		is_hit <= '0';
 		if (reset = '1') then
 			current_state <= idle;
-			is_hit_next <= '0';
+			is_hit <= '0';
 		elsif (rising_edge(clk)) then
 			current_state <= next_state;
 			is_hit <= is_hit_c;
@@ -53,14 +52,28 @@ detection: process(tank_x, tank_y, bullet_x, bullet_y, current_state, pulse) is
 			if (((signed(tank_x) + TANK_WIDTH/2) > signed(bullet_x)) and ((signed(tank_x) - TANK_WIDTH/2) < signed(bullet_x))) then -- hit in x
 				if ((signed(tank_y) - TANK_HEIGHT/2) < signed(bullet_y)) then -- hit in y also
 					is_hit_c <= '1';
+					next_state <= waitOnPulseLowCollision;
 				end if;
+			else 
+				is_hit_c <= '0';
+				next_state <= waitONPulseLowNoCollision;
 			end if;		
-			next_state <= waitOnPulseLow;
-		when (waitOnPulseLow) =>
+
+		when (waitOnPulseLowCollision) =>
 			if (pulse = '0') then
 				next_state <= idle;
+				is_hit_c <= '0';
 			else
-				next_state <= waitOnPulseLow;
+				is_hit_c <= '1';
+				next_state <= waitOnPulseLowCollision;
+			end if;
+		when (waitOnPulseLowNoCollision) =>
+			if (pulse = '0') then
+				next_state <= idle;
+				is_hit_c <= '0';
+			else
+				is_hit_c <= '0';
+				next_state <= waitOnPulseLowNoCollision;
 			end if;
 		end case; 	
 	end process;
