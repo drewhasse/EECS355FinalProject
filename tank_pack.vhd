@@ -55,6 +55,47 @@ package tank_pack is
   );
   end component backROM;
 
+  component bullet
+  generic (
+    w                : std_logic_vector(3 downto 0);
+    h                : std_logic_vector(3 downto 0);
+    rgb_color        : std_logic_vector(9 downto 0);
+    tank_y_pos       : std_logic_vector (8 downto 0);
+    bullet_direction : std_logic
+  );
+  port (
+    clk                   : in  std_logic;
+    reset                 : in  std_logic;
+    pulse                 : in  std_logic;
+    fire                  : in  std_logic;
+    current_x_pos         : in  std_logic_vector (9 downto 0);
+    current_y_pos         : in  std_logic_vector (8 downto 0);
+    current_bullet_active : in  std_logic;
+    tank_x_pos            : in  std_logic_vector (9 downto 0);
+    collision             : in  std_logic;
+    next_bullet_active    : out std_logic;
+    next_y_pos            : out std_logic_vector (8 downto 0);
+    next_x_pos            : out std_logic_vector (9 downto 0)
+  );
+  end component bullet;
+
+  component tank
+  generic (
+    y : std_logic_vector(8 downto 0);
+    width : std_logic_vector(5 downto 0)
+  );
+  port (
+    clk     : in  std_logic;
+    reset   : in  std_logic;
+    pulse   : in  std_logic;
+    speed   : in  std_logic_vector(1 downto 0);
+    isLoser : in  std_logic;
+    xout    : out std_logic_vector(9 downto 0)          --moveDirNew : out std_logic
+  );
+  end component tank;
+
+
+
 end package tank_pack;
 package body tank_pack is
 end package body tank_pack;
