@@ -2,19 +2,19 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-entity VGA_top_level is
+entity GraphicsOut is
 	port(
+			Ax, Ay, Bx, By, BAx, BAy, BBx, BBy : std_logic_vector(9 downto 0);
 			CLOCK_50 										: in std_logic;
 			RESET_N											: in std_logic;
-
 			--VGA
 			VGA_RED, VGA_GREEN, VGA_BLUE 					: out std_logic_vector(7 downto 0);
 			HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK		: out std_logic
 
 		);
-end entity VGA_top_level;
+end entity GraphicsOut;
 
-architecture structural of VGA_top_level is
+architecture structural of GraphicsOut is
 
 component pixelGenerator is
 	port(
@@ -51,10 +51,10 @@ begin
 --------------------------------------------------------------------------------------------
 
 	videoGen : pixelGenerator
-		port map(zeroVec, topVec,
-		 				 zeroVec, zeroVec,
-						 bullxVec, bullyVec2,
-						 bullxVec, bullyVec,
+		port map(Ax, Ay,
+		 				 Bx, By,
+						 BAx, BAy,
+						 BBx, BBy,
 						 CLOCK_50,
 						 VGA_clk_int,
 						 RESET_N,
