@@ -4,7 +4,7 @@ use IEEE.std_logic_1164.all;
 
 entity GraphicsOut is
 	port(
-			Ax, Ay, Bx, By, BAx, BAy, BBx, BBy        : std_logic_vector(9 downto 0);
+			Ax, Ay, Bx, By, BAx, BAy, BBx, BBy        : in std_logic_vector(9 downto 0);
 			CLOCK_50                                  : in std_logic;
 			RESET_N                                   : in std_logic;
 			--VGA

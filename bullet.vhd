@@ -2,12 +2,12 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity bullet is 
+entity bullet is
 generic (
 	w : std_logic_vector (3 downto 0);
 	h : std_logic_vector (3 downto 0);
 	rgb_color : std_logic_vector (9 downto 0);
-	tank_y_pos : in std_logic_vector (8 downto 0);
+	tank_y_pos : std_logic_vector (8 downto 0);
 	bullet_direction : std_logic
 );
 port (
@@ -69,7 +69,7 @@ next_y <= current_y;
 next_x <= current_x;
 next_active <= current_active;
 
-case (current) is 
+case (current) is
 	when idle =>
 	if(pulse = '0') then
 		next_state <= idle;
@@ -90,11 +90,11 @@ case (current) is
 			next_active <= '0';
 			next_state <= idle;
 		end if;
-		
+
 	end if;
-		
+
 	when update =>
-	
+
 	if (bullet_direction = '0') then
 		y_int := to_integer(signed(current_y)) + 5;
 		next_y <= std_logic_vector(to_signed(y_int,9));
@@ -122,7 +122,7 @@ case (current) is
 		end if;
 	end if;
 	next_state <= waitOnPulseLow;
-		
+
 
 	when waitOnPulseLow =>
 		if (pulse = '0') then
@@ -132,26 +132,15 @@ case (current) is
 		end if;
 
 	when others =>
-		
+
 		next_y <= "111111111";
 		next_x <= "1111111111";
 		next_state <= idle;
-	
+
 	end case;
 
 end process;
-		
-						
-		
+
+
+
 end architecture behavioral;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
