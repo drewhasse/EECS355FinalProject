@@ -17,25 +17,52 @@ port (
 end entity;
 
 architecture behavioral of collision is
-signal is_hit_c: std_logic;
-type collision_states is (idle, calculation, collision);
-signal state: collision_states;
+signal is_hit_c, is_hit_next: std_logic;
+type collision_states is (idle, calculation, waitOnPulseLow);
+signal current_state, next_state: collision_states;
+
+
 begin
 
-clocking: process(clk, reset) is 
-	begin
-		
-
-	end process;
-
-detection: process(tank_x, tank_y, bullet_x, bullet_y) is 
+CollisionClkProc: process(clk, reset) is 
 	begin
 		is_hit <= '0';
-		if (((signed(tank_x) + TANK_WIDTH/2) > signed(bullet_x)) and ((signed(tank_x) - TANK_WIDTH/2) < signed(bullet_x))) then -- hit in x
-			if ((signed(tank_y) - TANK_HEIGHT/2) < signed(bullet_y)) then -- hit in y also
-				is_hit <= '1';
+		if (reset = '1') then
+			current_state <= idle;
+			is_hit_next <= '0';
+		elsif (rising_edge(clk)) then
+			current_state <= next_state;
+			is_hit <= is_hit_c;
+		end if;
+	end process;
+
+detection: process(tank_x, tank_y, bullet_x, bullet_y, current_state, pulse) is 
+	begin
+		is_hit_c <= '0';		
+		case (current_state) is
+		when (idle) =>
+
+			if (pulse = '0') then
+				next_state <= idle;
+			else
+				next_state <= calculation;
 			end if;
-		end if;		
+		
+		when (calculation) =>
+			is_hit_c <= '0';
+			if (((signed(tank_x) + TANK_WIDTH/2) > signed(bullet_x)) and ((signed(tank_x) - TANK_WIDTH/2) < signed(bullet_x))) then -- hit in x
+				if ((signed(tank_y) - TANK_HEIGHT/2) < signed(bullet_y)) then -- hit in y also
+					is_hit_c <= '1';
+				end if;
+			end if;		
+			next_state <= waitOnPulseLow;
+		when (waitOnPulseLow) =>
+			if (pulse = '0') then
+				next_state <= idle;
+			else
+				next_state <= waitOnPulseLow;
+			end if;
+		end case; 	
 	end process;
 
 end architecture behavioral;

@@ -18,6 +18,9 @@ port(
 	tank_y : in std_logic_vector (8 downto 0);
 	bullet_x : in std_logic_vector(9 downto 0);
 	bullet_y : in std_logic_vector(8 downto 0);
+	clk : in std_logic;
+	reset : in std_logic;
+	pulse : in std_logic;
 	is_hit : out std_logic 
 );
 end component collision;
@@ -28,6 +31,10 @@ end component collision;
 	signal bullet_x_tb :  std_logic_vector(9 downto 0);
 	signal bullet_y_tb : std_logic_vector(8 downto 0);
 	signal is_hit_tb : std_logic;
+	signal clk_tb: std_logic;
+	signal reset_tb : std_logic := '0';
+	signal pulse_tb : std_logic := '0';
+
 
 
 begin
@@ -37,9 +44,20 @@ uat: collision
 		tank_x => tank_x_tb,
 		tank_y => tank_y_tb,
 		bullet_x => bullet_x_tb,
-		bullet_y => bullet_y_tb,
-		is_hit => is_hit_tb	
-		);				
+		bullet_y => bullet_y_tb,	
+		clk => clk_tb,
+		reset => reset_tb,
+		pulse => pulse_tb,
+		is_hit => is_hit_tb			
+		);
+
+process
+begin
+	clk_tb <= '1';
+	wait for 0.01 ns;
+	clk_tb <= '0';
+	wait for 0.01 ns;
+end process;				
 					
 process is
 begin
@@ -47,8 +65,12 @@ begin
 	tank_y_tb <= std_logic_vector(to_signed(25, tank_y_tb'length));
 	bullet_x_tb <= std_logic_vector(to_signed(302, bullet_x_tb'length));
 	bullet_y_tb <= std_logic_vector(to_signed(25, bullet_y_tb'length));
+	pulse_tb <= '1';
 	wait for 10 ns;
 
+	pulse_tb <= '0';
+	wait for 10 ns;
+	pulse_tb <= '1';
 	bullet_x_tb <= std_logic_vector(to_signed(10, bullet_x_tb'length));
 
 
