@@ -15,7 +15,9 @@ port (
 	reset : in std_logic;
 	pulse : in std_logic;
 	fire : in std_logic;
-	current_bullet_active : in std_logic;
+	--current_x_pos : in std_logic_vector (9 downto 0);
+	--current_y_pos : in std_logic_vector (8 downto 0);
+	--current_bullet_active : in std_logic;
 	tank_x_pos : in std_logic_vector (9 downto 0);
 	collision : in std_logic;
 	next_bullet_active : out std_logic;
@@ -25,7 +27,7 @@ port (
 end entity bullet;
 
 architecture behavioral of bullet is
-TYPE state is (idle,update,waitOnPulseLow,bullet_check);
+TYPE state is (idle,fire_state,update,waitOnPulseLow,bullet_check,output);
 signal current,next_state : state;
 signal next_active : std_logic;
 signal next_y : std_logic_vector (8 downto 0);
@@ -56,7 +58,7 @@ begin
 	end if;
 end process;
 
-update_position_comb : process (pulse,fire,current_bullet_active)
+update_position_comb : process (pulse,fire,current_active)
 variable y_int : integer;
 variable width_int : integer;
 variable height_int : integer;
@@ -72,18 +74,21 @@ case (current) is
 	if(pulse = '0') then
 		next_state <= idle;
 	else
-		if(fire = '0' and current_bullet_active = '0') then
+		if(fire = '0' and current_active = '0') then
 			next_y <= "111111111";
 			next_x <= "1111111111";
 			next_active <= '0';
 			next_state <= idle;
-		elsif(fire = '1' and current_bullet_active = '0') then
+		elsif(fire = '1' and current_active = '0') then
 			next_active <= '1';
 			next_x <= tank_x_pos;
 			next_y <= tank_y_pos;
 			next_state <= update;
-		else
+		elsif(current_active = '1') then
 			next_state <= update;
+		else
+			next_active <= '0';
+			next_state <= idle;
 		end if;
 		
 	end if;
@@ -139,6 +144,8 @@ end process;
 						
 		
 end architecture behavioral;
+	
+	
 	
 	
 	
