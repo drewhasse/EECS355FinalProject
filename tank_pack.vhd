@@ -7,7 +7,7 @@ package tank_pack is
   constant TANK_HEIGHT : natural := 105;
   constant TANKA_Y : std_logic_vector(9 downto 0) := "0000001010";
   constant TANKB_Y : std_logic_vector(9 downto 0) := std_logic_vector(to_unsigned(380, 10));
-  constant TANK_INITIAL_X : natural := 320;
+  constant TANK_INITIAL_X : integer := 319;
   constant SPEED_FACTOR : natural := 2;
   constant BULLET_HEIGHT : natural := 50;
   constant BULLET_WIDTH : natural := 8;
