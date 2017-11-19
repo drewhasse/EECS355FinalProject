@@ -115,6 +115,18 @@ component ps2 is
 		  );
 end component ps2;
 
+component collision
+port (
+  tank_x   : in  std_logic_vector(9 downto 0);
+  tank_y   : in  std_logic_vector (8 downto 0);
+  bullet_x : in  std_logic_vector(9 downto 0);
+  bullet_y : in  std_logic_vector(8 downto 0);
+  clk      : in  std_logic;
+  reset    : in  std_logic;
+  pulse    : in  std_logic;
+  is_hit   : out std_logic
+);
+end component collision;
 
 end package tank_pack;
 package body tank_pack is

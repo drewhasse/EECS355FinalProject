@@ -9,6 +9,7 @@ entity tank_game is
     reset : in std_logic;
     spd1, spd2 : out std_logic_vector(1 downto 0);
     fire1, fire2 : out std_logic;
+    collA, collB : out std_logic;
     keyboard_clk, keyboard_data : in std_logic;
     VGA_RED, VGA_GREEN, VGA_BLUE              : out std_logic_vector(7 downto 0);
     HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK : out std_logic
@@ -18,6 +19,7 @@ end entity;
 architecture structural of tank_game is
   signal pulse : std_logic;
   signal aXout, bXout : std_logic_vector(9 downto 0);
+  signal is_hit_a, is_hit_b : std_logic;
   signal bull_a_x, bull_a_y, bull_b_x, bull_b_y : std_logic_vector(9 downto 0);
   signal speedA, speedB : std_logic_vector(1 downto 0);
   signal bull_a_active, bull_b_active : std_logic;
@@ -79,7 +81,7 @@ begin
     pulse                 => pulse,
     fire                  => fireA,
     tank_x_pos            => std_logic_vector((unsigned(aXout) + to_unsigned(TANK_WIDTH/2,10))),
-    collision             => '0',
+    collision             => is_hit_b,
     next_bullet_active    => bull_a_active,
     next_y_pos            => bull_a_y(8 downto 0),
     next_x_pos            => bull_a_x
@@ -96,11 +98,36 @@ begin
     pulse                 => pulse,
     fire                  => fireB,
     tank_x_pos            => std_logic_vector((unsigned(bXout) + to_unsigned(TANK_WIDTH/2,10))),
-    collision             => '0',
+    collision             => is_hit_a,
     next_bullet_active    => bull_b_active,
     next_y_pos            => bull_b_y(8 downto 0),
     next_x_pos            => bull_b_x
   );
+
+  collision_a : collision
+  port map (
+    tank_x   => aXout,
+    tank_y   => TANKA_Y(8 downto 0),
+    bullet_x => bull_b_x,
+    bullet_y => bull_b_y(8 downto 0),
+    clk      => clk,
+    reset    => reset,
+    pulse    => pulse,
+    is_hit   => is_hit_a
+  );
+
+  collision_b : collision
+  port map (
+    tank_x   => bXout,
+    tank_y   => TANKB_Y(8 downto 0),
+    bullet_x => bull_a_x,
+    bullet_y => bull_a_y(8 downto 0),
+    clk      => clk,
+    reset    => reset,
+    pulse    => pulse,
+    is_hit   => is_hit_b
+  );
+
 
   graphics : GraphicsOut
   	port map(
@@ -118,4 +145,6 @@ begin
     spd2 <= speedB;
     fire1 <= fireA;
     fire2 <= fireB;
+    collA <= is_hit_a;
+    collB <= is_hit_b;
 end architecture;
