@@ -36,7 +36,6 @@ begin
         moveDirNew <= '0';
         current_s <= idle;
       elsif (rising_edge(clk)) then
-        xout <= xnew_c;
         xnew <= xnew_c;
         moveDirNew <= moveDirNew_c;
         current_s <= next_s;
@@ -47,19 +46,19 @@ begin
 
     variable x_int : integer;
     variable width_int : integer;
-    variable neg1 : integer;
+    variable neg : integer;
+    variable moveAmnt : integer;
     variable goLeft : unsigned(9 downto 0);
-    variable testVec : std_logic_vector(2 downto 0);
 
     begin
       x_int := to_integer(unsigned(xnew));
       width_int := to_integer(unsigned(width));
-      neg1 := -1;
-      goLeft := (unsigned(xnew) - to_unsigned((to_integer(unsigned(speed)))*SPEED_FACTOR, 10));
-
+      neg := -1;
+      --xnew_c <= std_logic_vector(unsigned(xnew) + to_unsigned((to_integer(unsigned(speed)))*SPEED_FACTOR, 10));
       xnew_c <= xnew;
       moveDirNew_c <= moveDirNew;
       next_s <= current_s;
+      xout <= xnew;
 
       case (current_s) is
 ---------------------------------Idle------------------------------------------
@@ -74,28 +73,25 @@ begin
 
 -------------------------------Update Position--------------------------------
         when (update) =>
-          if (moveDirNew = '0') then
-            xnew_c <= std_logic_vector(unsigned(xnew) + to_unsigned((to_integer(unsigned(speed)))*SPEED_FACTOR, 10));
-          elsif (moveDirNew = '1') then
-            if (goLeft > 700) then
-              xnew_c <= std_logic_vector(to_unsigned(to_integer(unsigned(speed))*SPEED_FACTOR, 10));
+          moveAmnt := ((to_integer(unsigned(speed)))*SPEED_FACTOR);
+          if (moveDirNew ='0') THEN
+            if ((x_int+TANK_WIDTH+moveAmnt) <= 640) then
+                xnew_c <= std_logic_vector(unsigned(xnew) + to_unsigned(moveAmnt, 10));
             else
-              xnew_c <= std_logic_vector(goLeft);
+                xnew_c <= std_logic_vector(to_unsigned((640-TANK_WIDTH), 10));
+                moveDirNew_c <= '1';
             end if;
-            --report integer'image(to_integer(unsigned(xnew)) - to_integer(unsigned(speed))*SPEED_FACTOR);
-            testVec := std_logic_vector(to_unsigned(neg1,3));
-            report std_logic'image(testVec(2));
-            report std_logic'image(testVec(1));
-            report std_logic'image(testVec(0));
           end if;
 
-          if (((x_int <= 0) or (x_int >= 640)) and moveDirNew = '1') then --x is negative and moving left
-            moveDirNew_c <= '0';
-          elsif ((x_int > (639 - width_int)) and moveDirNew = '0') then
-            moveDirNew_c <= '1';
-          else
-            moveDirNew_c <= moveDirNew;
+          if (moveDirNew ='1') then
+            if ((x_int-moveAmnt) >= 0) then
+                xnew_c <= std_logic_vector(unsigned(xnew) - to_unsigned(moveAmnt, 10));
+            else
+                xnew_c <= std_logic_vector(to_unsigned(0, 10));
+                moveDirNew_c <= '0';
+            end if;
           end if;
+
           if (isLoser = '1') then
             next_s <= lost;
           else
