@@ -73,31 +73,7 @@ begin
 		if (rising_edge(clk)) then
 			colorAddIntTrans <= ((pixel_row_int mod (BACK_HEIGHT-1))-1)*BACK_WIDTH + (pixel_column_int mod (BACK_WIDTH-1));
 			colorAddTrans <= std_logic_vector(to_unsigned(colorAddIntTrans, 16));
-			if (pixel_row_int < TankAyLim and pixel_row_int > TankAy and pixel_column_int < TankAxLim and pixel_column_int >= TankAx) then
-				colorAddInter <= ((pixel_row_int-(TankAy+1))*TANK_WIDTH)+(pixel_column_int-TankAx);
-				colorAddress <= std_logic_vector(to_unsigned(colorAddInter, 14));
-				if (colorA = CHROMA_KEY) then
-					red_out <= colorF(23 downto 16);
-					green_out <= colorF(15 downto 8);
-					blue_out <= colorF(7 downto 0);
-				else
-					red_out <= colorA(23 downto 16);
-					green_out <= colorA(15 downto 8);
-					blue_out <= colorA(7 downto 0);
-				end if;
-			elsif (pixel_row_int < TankByLim and pixel_row_int > TankBy and pixel_column_int < TankBxLim and pixel_column_int >= TankBx) then
-				colorAddInter <= ((pixel_row_int-(TankBy+1))*TANK_WIDTH)+(pixel_column_int-TankBx);
-				colorAddress <= std_logic_vector(to_unsigned(colorAddInter, 14));
-				if (colorB = CHROMA_KEY) then
-					red_out <= colorF(23 downto 16);
-					green_out <= colorF(15 downto 8);
-					blue_out <= colorF(7 downto 0);
-				else
-					red_out <= colorB(23 downto 16);
-					green_out <= colorB(15 downto 8);
-					blue_out <= colorB(7 downto 0);
-				end if;
-			elsif (pixel_row_int <= BullAyLim and pixel_row_int > BullAyint and pixel_column_int < BullAxLim and pixel_column_int >= BullAxint) then
+			if (pixel_row_int <= BullAyLim and pixel_row_int > BullAyint and pixel_column_int < BullAxLim and pixel_column_int >= BullAxint) then
 				colorAddInter <= ((pixel_row_int-(BullAyint+1))*BULLET_WIDTH)+(pixel_column_int-BullAxint);
 				colorAddress <= std_logic_vector(to_unsigned(colorAddInter, 14));
 				if (colorC = CHROMA_KEY) then
@@ -120,6 +96,30 @@ begin
 					red_out <= colorD(23 downto 16);
 					green_out <= colorD(15 downto 8);
 					blue_out <= colorD(7 downto 0);
+				end if;
+			elsif (pixel_row_int < TankAyLim and pixel_row_int > TankAy and pixel_column_int < TankAxLim and pixel_column_int >= TankAx) then
+				colorAddInter <= ((pixel_row_int-(TankAy+1))*TANK_WIDTH)+(pixel_column_int-TankAx);
+				colorAddress <= std_logic_vector(to_unsigned(colorAddInter, 14));
+				if (colorA = CHROMA_KEY) then
+					red_out <= colorF(23 downto 16);
+					green_out <= colorF(15 downto 8);
+					blue_out <= colorF(7 downto 0);
+				else
+					red_out <= colorA(23 downto 16);
+					green_out <= colorA(15 downto 8);
+					blue_out <= colorA(7 downto 0);
+				end if;
+			elsif (pixel_row_int < TankByLim and pixel_row_int > TankBy and pixel_column_int < TankBxLim and pixel_column_int >= TankBx) then
+				colorAddInter <= ((pixel_row_int-(TankBy+1))*TANK_WIDTH)+(pixel_column_int-TankBx);
+				colorAddress <= std_logic_vector(to_unsigned(colorAddInter, 14));
+				if (colorB = CHROMA_KEY) then
+					red_out <= colorF(23 downto 16);
+					green_out <= colorF(15 downto 8);
+					blue_out <= colorF(7 downto 0);
+				else
+					red_out <= colorB(23 downto 16);
+					green_out <= colorB(15 downto 8);
+					blue_out <= colorB(7 downto 0);
 				end if;
 			else
 				red_out <= colorF(23 downto 16);

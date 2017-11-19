@@ -4,9 +4,6 @@ use ieee.numeric_std.all;
 
 entity bullet is
 generic (
-	w : std_logic_vector (3 downto 0);
-	h : std_logic_vector (3 downto 0);
-	rgb_color : std_logic_vector (9 downto 0);
 	tank_y_pos : std_logic_vector (8 downto 0);
 	bullet_direction : std_logic
 );

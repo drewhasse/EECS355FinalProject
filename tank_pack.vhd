@@ -59,9 +59,6 @@ package tank_pack is
 
   component bullet
   generic (
-    w                : std_logic_vector(3 downto 0);
-    h                : std_logic_vector(3 downto 0);
-    rgb_color        : std_logic_vector(9 downto 0);
     tank_y_pos       : std_logic_vector (8 downto 0);
     bullet_direction : std_logic
   );
@@ -70,9 +67,6 @@ package tank_pack is
     reset                 : in  std_logic;
     pulse                 : in  std_logic;
     fire                  : in  std_logic;
-    current_x_pos         : in  std_logic_vector (9 downto 0);
-    current_y_pos         : in  std_logic_vector (8 downto 0);
-    current_bullet_active : in  std_logic;
     tank_x_pos            : in  std_logic_vector (9 downto 0);
     collision             : in  std_logic;
     next_bullet_active    : out std_logic;
