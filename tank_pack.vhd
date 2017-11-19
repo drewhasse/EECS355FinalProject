@@ -5,8 +5,8 @@ use IEEE.numeric_std.all;
 package tank_pack is
   constant TANK_WIDTH : natural := 96;
   constant TANK_HEIGHT : natural := 105;
-  constant TANKA_Y : std_logic_vector(9 downto 0) := "0000001010";
-  constant TANKB_Y : std_logic_vector(9 downto 0) := std_logic_vector(to_unsigned(380, 10));
+  constant TANKA_Y : std_logic_vector(9 downto 0) := std_logic_vector(to_unsigned(370, 10));
+  constant TANKB_Y : std_logic_vector(9 downto 0) := std_logic_vector(to_unsigned(10, 10));
   constant TANK_INITIAL_X : integer := 319;
   constant SPEED_FACTOR : natural := 2;
   constant BULLET_HEIGHT : natural := 50;
@@ -114,6 +114,12 @@ package tank_pack is
   );
 end component counter;
 
+component ps2 is
+	port(keyboard_clk, keyboard_data, clock_50MHz, reset : in std_logic;
+			 speedA, speedB : out std_logic_vector(1 downto 0);
+			 fireA, fireB : out std_logic
+		  );
+end component ps2;
 
 
 end package tank_pack;
