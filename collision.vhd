@@ -18,7 +18,7 @@ end entity;
 
 architecture behavioral of collision is
 signal is_hit_c, is_hit_next: std_logic;
-type collision_states is (idle, calculation, waitOnPulseLowCollision, waitOnPulseLowNoCollision);
+type collision_states is (idle, waitOnPulseLow);
 signal current_state, next_state: collision_states;
 
 
@@ -28,53 +28,36 @@ CollisionClkProc: process(clk, reset) is
 	begin
 		if (reset = '1') then
 			current_state <= idle;
-			is_hit <= '0';
+			is_hit_next <= '0';
 		elsif (rising_edge(clk)) then
 			current_state <= next_state;
-			is_hit <= is_hit_c;
+			is_hit_next <= is_hit_c;
 		end if;
 	end process;
 
 detection: process(tank_x, tank_y, bullet_x, bullet_y, current_state, pulse) is
 	begin
-		is_hit_c <= '0';
+		is_hit_c <= is_hit_next;
+		is_hit <= is_hit_next;
 		next_state <= current_state;
 		case (current_state) is
 		when (idle) =>
-
-			if (pulse = '0') then
-				next_state <= idle;
-			else
-				next_state <= calculation;
-			end if;
-
-		when (calculation) =>
-			is_hit_c <= '0';
-			if (((signed(tank_x) + TANK_WIDTH) >= signed(bullet_x)) and ((signed(tank_x)) <= signed(bullet_x))) then -- hit in x
-				if (((signed(tank_y) + TANK_HEIGHT) >= signed(bullet_y)) and ((signed(tank_y)) <= signed(bullet_y))) then -- hit in y also
-					is_hit_c <= '1';
-					next_state <= waitOnPulseLowCollision;
+			if (pulse = '1') then
+				if (((signed(tank_x) + TANK_WIDTH) >= signed(bullet_x)) and ((signed(tank_x)) <= signed(bullet_x))) then -- hit in x
+					if (((signed(tank_y) + TANK_HEIGHT) >= signed(bullet_y)) and ((signed(tank_y)) <= signed(bullet_y))) then -- hit in y also
+						is_hit_c <= '1';
+						next_state <= waitOnPulseLow;
+					else
+						is_hit_c <= '0';
+					end if;
+				else
+					is_hit_c <= '0';
 				end if;
-			else
-				is_hit_c <= '0';
-				next_state <= waitONPulseLowNoCollision;
 			end if;
 
-		when (waitOnPulseLowCollision) =>
+		when (waitOnPulseLow) =>
 			if (pulse = '0') then
 				next_state <= idle;
-				is_hit_c <= '0';
-			else
-				is_hit_c <= '1';
-				next_state <= waitOnPulseLowCollision;
-			end if;
-		when (waitOnPulseLowNoCollision) =>
-			if (pulse = '0') then
-				next_state <= idle;
-				is_hit_c <= '0';
-			else
-				is_hit_c <= '0';
-				next_state <= waitOnPulseLowNoCollision;
 			end if;
 		end case;
 	end process;

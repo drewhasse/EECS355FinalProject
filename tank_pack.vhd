@@ -59,7 +59,7 @@ package tank_pack is
 
   component bullet
   generic (
-    tank_y_pos       : std_logic_vector (8 downto 0);
+    tank_y_pos       : std_logic_vector (9 downto 0);
     bullet_direction : std_logic
   );
   port (
@@ -70,7 +70,7 @@ package tank_pack is
     tank_x_pos            : in  std_logic_vector (9 downto 0);
     collision             : in  std_logic;
     next_bullet_active    : out std_logic;
-    next_y_pos            : out std_logic_vector (8 downto 0);
+    next_y_pos            : out std_logic_vector (9 downto 0);
     next_x_pos            : out std_logic_vector (9 downto 0)
   );
   end component bullet;
@@ -127,6 +127,33 @@ port (
   is_hit   : out std_logic
 );
 end component collision;
+
+component de2lcd IS
+	PORT(
+    reset, clk_50Mhz                        : IN	STD_LOGIC;
+		winner                                    : IN STD_LOGIC_VECTOR(1 downto 0);
+		LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED : OUT	STD_LOGIC;
+		LCD_RW                                    : BUFFER STD_LOGIC;
+		DATA_BUS                                  : INOUT	STD_LOGIC_VECTOR(7 DOWNTO 0));
+END component de2lcd;
+
+component score
+port (
+  clk       : in  std_logic;
+  reset     : in  std_logic;
+  collision : in  std_logic;
+  pulse     : in  std_logic;
+  score     : out std_logic_vector(3 downto 0)
+);
+end component score;
+
+component leddcd
+port (
+  data_in      : in  std_logic_vector(3 downto 0);
+  segments_out : out std_logic_vector(6 downto 0)
+);
+end component leddcd;
+
 
 end package tank_pack;
 package body tank_pack is
