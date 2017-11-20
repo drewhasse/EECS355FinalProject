@@ -13,7 +13,10 @@ entity tank_game is
     HexA, HexB, HexLabelA, HexLabelB : out std_logic_vector(6 downto 0);
     keyboard_clk, keyboard_data : in std_logic;
     VGA_RED, VGA_GREEN, VGA_BLUE              : out std_logic_vector(7 downto 0);
-    HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK : out std_logic
+    HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK : out std_logic;
+    LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED		: OUT	STD_LOGIC;
+    LCD_RW						: BUFFER STD_LOGIC;
+    DATA_BUS				: INOUT	STD_LOGIC_VECTOR(7 DOWNTO 0)
   );
 end entity;
 
@@ -24,13 +27,15 @@ architecture structural of tank_game is
   signal bull_a_x, bull_a_y, bull_b_x, bull_b_y : std_logic_vector(9 downto 0);
   signal speedA, speedB : std_logic_vector(1 downto 0);
   signal fireA, fireB : std_logic;
+  signal win_sig : std_logic_vector(1 downto 0);
   signal scoreA, scoreB : std_logic_vector(3 downto 0);
+  signal hold : std_logic;
 begin
   counter_i : counter
   port map (
     clk   => clk,
     reset => reset,
-    hold  => '0',
+    hold  => hold,
     pulse => pulse
   );
 
@@ -54,7 +59,7 @@ begin
     reset   => reset,
     pulse   => pulse,
     speed   => speedA,
-    isLoser => '0',
+    isLoser => win_sig(1),
     xout    => aXout
   );
 
@@ -67,7 +72,7 @@ begin
     reset   => reset,
     pulse   => pulse,
     speed   => speedB,
-    isLoser => '0',
+    isLoser => win_sig(0),
     xout    => bXout
   );
 
@@ -147,6 +152,18 @@ begin
     score     => scoreB
   );
 
+  win:  win_logic
+  port map(
+    clk => clk,
+    reset => reset,
+    pulse =>  pulse,
+    scoreA => scoreA,
+    scoreB => scoreB,
+    hold => hold,
+    winner => win_sig
+  );
+
+
   leddcd_a : leddcd
   port map (
     data_in      => scoreA,
@@ -170,6 +187,20 @@ begin
     data_in      => "1011",
     segments_out => HexLabelB
   );
+
+  lcd : de2lcd
+  	PORT MAP(
+      reset => not(reset),
+      clk_50Mhz => clk,
+  		winner => win_sig,
+  		LCD_RS => LCD_RS,
+      LCD_E => LCD_E,
+      LCD_ON => LCD_ON,
+      RESET_LED => RESET_LED,
+      SEC_LED => SEC_LED,
+  		LCD_RW => LCD_RW,
+  		DATA_BUS => DATA_BUS
+      );
 
   graphics : GraphicsOut
   	port map(

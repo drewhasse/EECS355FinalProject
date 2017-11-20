@@ -9,6 +9,7 @@ package tank_pack is
   constant TANKB_Y : std_logic_vector(9 downto 0) := std_logic_vector(to_unsigned(10, 10));
   constant TANK_INITIAL_X : integer := 319;
   constant SPEED_FACTOR : natural := 2;
+  constant SCORE_TO_WIN : std_logic_vector(3 downto 0) := "0011";
   constant BULLET_HEIGHT : natural := 50;
   constant BULLET_WIDTH : natural := 8;
   constant BACK_WIDTH : natural := 256;
@@ -154,6 +155,17 @@ port (
 );
 end component leddcd;
 
+
+component win_logic is
+  port (
+  clk : in std_logic;
+  reset : in std_logic;
+  pulse : in std_logic;
+  scoreA, scoreB : in std_logic_vector(3 downto 0);
+  hold : out std_logic;
+  winner: out std_logic_vector(1 downto 0)
+  );
+end component win_logic;
 
 end package tank_pack;
 package body tank_pack is

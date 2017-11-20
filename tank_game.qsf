@@ -143,4 +143,30 @@ set_location_assignment PIN_AA19 -to HexA[1]
 set_location_assignment PIN_AB19 -to HexA[0]
 set_location_assignment PIN_F19 -to bull_b_active
 set_location_assignment PIN_G19 -to bull_a_active
+set_location_assignment PIN_L4 -to LCD_E
+set_location_assignment PIN_G20 -to RESET_LED
+set_location_assignment PIN_H21 -to SEC_LED
+set_location_assignment PIN_L5 -to LCD_ON
+set_location_assignment PIN_M2 -to LCD_RS
+set_location_assignment PIN_M1 -to LCD_RW
+set_location_assignment PIN_M5 -to DATA_BUS[7]
+set_location_assignment PIN_M3 -to DATA_BUS[6]
+set_location_assignment PIN_K2 -to DATA_BUS[5]
+set_location_assignment PIN_K1 -to DATA_BUS[4]
+set_location_assignment PIN_K7 -to DATA_BUS[3]
+set_location_assignment PIN_L2 -to DATA_BUS[2]
+set_location_assignment PIN_L1 -to DATA_BUS[1]
+set_location_assignment PIN_L3 -to DATA_BUS[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DATA_BUS[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DATA_BUS[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DATA_BUS[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DATA_BUS[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DATA_BUS[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DATA_BUS[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DATA_BUS[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DATA_BUS[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_E
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_ON
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_RS
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_RW
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
