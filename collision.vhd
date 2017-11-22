@@ -43,8 +43,8 @@ detection: process(tank_x, tank_y, bullet_x, bullet_y, current_state, pulse) is
 		case (current_state) is
 		when (idle) =>
 			if (pulse = '1') then
-				if (((signed(tank_x) + TANK_WIDTH) >= signed(bullet_x)) and ((signed(tank_x)) <= signed(bullet_x))) then -- hit in x
-					if (((signed(tank_y) + TANK_HEIGHT) >= signed(bullet_y)) and ((signed(tank_y)) <= signed(bullet_y))) then -- hit in y also
+				if (((unsigned(tank_x) + TANK_WIDTH) >= unsigned(bullet_x)) and ((unsigned(tank_x)) <= unsigned(bullet_x) + BULLET_WIDTH)) then -- hit in x
+					if (((unsigned(tank_y) + TANK_HEIGHT) >= unsigned(bullet_y)) and ((unsigned(tank_y)) <= unsigned(bullet_y) + BULLET_HEIGHT)) then -- hit in y also
 						is_hit_c <= '1';
 						next_state <= waitOnPulseLow;
 					else
