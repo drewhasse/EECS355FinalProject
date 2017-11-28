@@ -72,7 +72,7 @@ begin
 	wait for 0.5 ns;
 	
 	bullet_x_tb <= std_logic_vector(to_signed(10, bullet_x_tb'length));
-	wait for 0 ns;
+	wait for 0.5 ns;
 	pulse_tb <= '1';
 
 	wait;

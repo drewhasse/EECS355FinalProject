@@ -58,6 +58,7 @@ detection: process(tank_x, tank_y, bullet_x, bullet_y, current_state, pulse) is
 		when (waitOnPulseLow) =>
 			if (pulse = '0') then
 				next_state <= idle;
+				is_hit_c <= '0';
 			end if;
 		end case;
 	end process;
