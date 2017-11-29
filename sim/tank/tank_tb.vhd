@@ -89,7 +89,7 @@ end component tank;
 
       stop_clk : process is
       begin
-        wait for 6 ms;
+        wait for 1 ms;
         hold <= '1';
         wait;
       end process;
